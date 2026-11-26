@@ -217,6 +217,62 @@ body.na-capa header { display: none; }
   .capa-txt { padding: 28px 20px 24px; }
   .capa-eb { font-size: 13px; letter-spacing: .12em; }
 }
+
+/* Capas de assunto, cenas animadas e figurinhas */
+.capa-assunto { position: relative; overflow: hidden; border-radius: 14px; min-height: 170px; background: #11161d; color: #eceef0; }
+.capa-assunto .ca-arte { position: absolute; inset: 0; width: 100%; height: 100%; }
+.capa-assunto::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(14,16,19,.92) 0%, rgba(14,16,19,.55) 50%, rgba(14,16,19,0) 80%); }
+.capa-assunto .ca-txt { position: relative; z-index: 1; padding: 22px 20px; display: flex; flex-direction: column; gap: 6px; max-width: 70%; }
+.ca-eb { font-family: var(--font-display); font-weight: 700; letter-spacing: .14em; font-size: 13px; color: #f2b705; text-transform: uppercase; }
+.ca-t { font-family: var(--font-display); font-weight: 800; font-size: clamp(28px, 6vw, 40px); line-height: .95; text-transform: uppercase; }
+.ca-s { font-size: 15px; color: #d6d9dd; }
+.capa-assunto.mini { min-height: 96px; border-radius: 10px; margin: -4px -4px 4px; }
+.capa-assunto.mini .ca-txt { padding: 14px; }
+.capa-assunto.mini .ca-t { font-size: 22px; }
+.cena { display: flex; flex-direction: column; gap: 10px; }
+.cena-svg { width: 100%; height: auto; border-radius: 12px; border: 1px solid var(--line); background: #dff1ff; }
+.cena-svg .hot { cursor: pointer; }
+.cena-svg .hot:focus-visible { outline: 3px solid var(--accent); }
+#cs-truck { transition: transform 1.2s cubic-bezier(.3,.7,.3,1); }
+#cs-braco { transition: transform .4s; }
+#cs-braco.aponta { transform: rotate(-110deg); }
+.cx { transition: transform 1s ease, opacity 1s ease; }
+.cx.sai { transform: translate(-370px, 70px); opacity: 0; }
+.cx.sai[data-k="1"] { transition-delay: .25s; } .cx.sai[data-k="2"] { transition-delay: .5s; }
+.balao { background: #fff; color: #1b1e22; border: 2px solid #1b1e22; border-radius: 14px; padding: 6px 10px; font: 600 13px/1.3 var(--font-body); box-shadow: 2px 2px 0 #1b1e22; }
+.balao.grito { background: #fff3c4; font-weight: 800; animation: treme .4s 2; }
+@keyframes treme { 0%,100% { transform: translateX(0); } 25% { transform: translateX(-3px); } 75% { transform: translateX(3px); } }
+.cena-ctrl { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.cena-pontos { display: flex; gap: 6px; flex: 1; justify-content: center; }
+.cena-pontos span { width: 10px; height: 10px; border-radius: 50%; background: var(--line); }
+.cena-pontos span.on { background: var(--accent); }
+.cena-titulo { font-family: var(--font-display); font-weight: 800; font-size: 22px; text-transform: uppercase; }
+.cena-painel:empty { display: none; }
+.cena-painel { border: 1px solid var(--line); border-radius: 12px; padding: 12px; background: var(--surface-2); display: flex; flex-direction: column; gap: 8px; }
+.cp-linha { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; font-weight: 600; }
+.cp-num { background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 4px 10px; font-variant-numeric: tabular-nums; }
+.cp-num.ok { border-color: var(--ok); color: var(--ok); } .cp-num.bad { border-color: var(--bad); color: var(--bad); }
+.cp-barra { display: flex; height: 30px; border-radius: 8px; overflow: hidden; font-size: 12px; font-weight: 700; }
+.cp-lim { background: var(--ok-bg); color: var(--ok); display: flex; align-items: center; padding-left: 8px; }
+.cp-sobra { flex: 1; background: var(--bad); color: #fff; display: flex; align-items: center; justify-content: center; }
+.cp-blocos { display: flex; flex-wrap: wrap; gap: 6px; }
+.cp-blocos span { width: 44px; height: 30px; border-radius: 6px; background: var(--accent); color: var(--accent-ink); font-weight: 700; font-size: 12px; display: flex; align-items: center; justify-content: center; animation: entra .35s both; }
+@keyframes entra { from { transform: scale(.2); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+.cena-toque, .cena-ese { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+.cena-ese[hidden], .cena-info[hidden] { display: none !important; }
+.cena-falas { display: flex; flex-direction: column; gap: 4px; font-size: 16px; }
+.cena-falas p { margin: 0; }
+.f-pol { color: var(--accent-text); } .f-mot { color: var(--bad); }
+.f-grito { font-weight: 800; }
+@media (max-width: 560px) { #cs-bp, #cs-bm { display: none !important; } }
+.cena-info { border-left: 4px solid var(--accent); background: var(--warn-bg); padding: 10px 12px; border-radius: 8px; font-size: 15.5px; }
+.album { display: flex; flex-wrap: wrap; gap: 12px; }
+.fig { display: flex; flex-direction: column; align-items: center; gap: 4px; width: 96px; text-align: center; font-size: 12.5px; font-weight: 600; }
+.fig svg { width: 84px; height: 84px; }
+.fig.bloq { color: var(--muted); }
+.cp-fig { display: flex; justify-content: center; }
+.subject.com-capa { padding-top: 12px; }
+@media (prefers-reduced-motion: reduce) { #cs-truck, .cx, #cs-braco { transition: none; } .balao.grito, .cp-blocos span { animation: none; } }
 @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
 </style>
 
@@ -22037,6 +22093,7 @@ body.na-capa header { display: none; }
   {
    "id": "legislacao-transito-5",
    "nome": "Legislação de Trânsito V",
+   "capa": "lt5",
    "area": "Fiscalização de veículos de carga: pesos, dimensões e CMT",
    "fonte": "Slides Fiscalização de Veículo de Carga (CPOR 2026) e Slides Excesso de Peso e CMT (CPOR 2026), SUBTEN PM Jandira e SGT PM Fortunato.",
    "resumo": [
@@ -22634,6 +22691,8 @@ body.na-capa header { display: none; }
      "id": "a9",
      "n": 9,
      "min": 10,
+     "capa": "balanca",
+     "cena": "balanca",
      "titulo": "Auto de infração e cálculo da multa de excesso de peso",
      "objetivo": "Escolher o código (683-11, 683-12 ou 683-13), preencher o AIT e calcular a multa.",
      "previo": "Aulas 7 e 8.",
@@ -25939,6 +25998,7 @@ function renderSubject(m) {
   const app = $("#app");
   app.innerHTML = `
     <button class="btn small back" id="back">← Matérias</button>
+    ${m.capa && typeof capaHTML === "function" ? capaHTML(m.capa) : ""}
     <div class="panel" style="gap:4px"><span class="tag">${esc(m.area || "Matéria")}</span><h2>${esc(m.nome)}</h2>${m.fonte ? `<span class="muted" style="font-size:14px">Fonte: ${esc(m.fonte)}</span>` : ""}</div>
     <nav class="tabs" role="tablist">${tabs.map(([k, l]) => `<button class="tab" role="tab" data-k="${k}" aria-selected="${k === VIEW.tab}">${l}</button>`).join("")}</nav>
     <section class="panel" id="tabbody"></section>`;
@@ -26400,6 +26460,193 @@ function renderProva(m, body, soAberta) {
   show();
 }
 
+/* ================= Capas ilustradas e cenas animadas ================= */
+const REDUZ = (() => { try { return matchMedia("(prefers-reduced-motion: reduce)").matches; } catch (e) { return false; } })();
+function svgCaminhao(x, y, s, cor) {
+  return `<g transform="translate(${x},${y}) scale(${s})">
+    <rect x="62" y="0" width="160" height="72" rx="6" fill="${cor || "#c98a00"}"/>
+    <path d="M70 0 Q140 -34 214 0 Z" fill="#d9b26b"/>
+    <rect x="0" y="22" width="60" height="58" rx="8" fill="#2f6fb3"/>
+    <rect x="10" y="30" width="30" height="20" rx="3" fill="#cfe6ff"/>
+    <rect x="0" y="72" width="224" height="10" fill="#3a3f46"/>
+    <circle cx="30" cy="88" r="14" fill="#1b1e22"/><circle cx="30" cy="88" r="6" fill="#9aa1a9"/>
+    <circle cx="165" cy="88" r="14" fill="#1b1e22"/><circle cx="165" cy="88" r="6" fill="#9aa1a9"/>
+    <circle cx="197" cy="88" r="14" fill="#1b1e22"/><circle cx="197" cy="88" r="6" fill="#9aa1a9"/>
+  </g>`;
+}
+function svgBalancaIcone(x, y, s) {
+  return `<g transform="translate(${x},${y}) scale(${s})" fill="none" stroke="#f2b705" stroke-width="6" stroke-linecap="round">
+    <line x1="60" y1="10" x2="60" y2="110"/><line x1="10" y1="30" x2="110" y2="30"/>
+    <path d="M10 30 L-8 70 H28 Z"/><path d="M110 30 L92 70 H128 Z"/><line x1="30" y1="110" x2="90" y2="110"/>
+  </g>`;
+}
+const CAPAS = {
+  lt5: { eb: "Legislação de Trânsito V", t: "Pesos, dimensões e CMT", s: "Fiscalização de veículos de carga, do conceito ao auto de infração.",
+         arte: () => svgCaminhao(330, 70, 1.15) + svgBalancaIcone(600, 20, 0.7) },
+  balanca: { eb: "Aula 9 · Assunto", t: "Caminhão na balança", s: "Tolerância, excesso, multa e transbordo, numa cena animada.",
+             arte: () => `<rect x="300" y="160" width="300" height="14" rx="3" fill="#5d636b"/>` + svgCaminhao(330, 66, 1.05) +
+               `<g transform="translate(560,18)"><rect width="140" height="54" rx="8" fill="#0b0c0e" stroke="#f2b705" stroke-width="3"/><text x="70" y="38" text-anchor="middle" font-family="monospace" font-size="26" font-weight="700" fill="#6fd18f">26.000</text></g>` }
+};
+function capaHTML(chave, mini) {
+  const c = CAPAS[chave]; if (!c) return "";
+  return `<div class="capa-assunto${mini ? " mini" : ""}" role="img" aria-label="Capa: ${esc(c.t)}">
+    <svg class="ca-arte" viewBox="0 0 720 200" preserveAspectRatio="xMaxYMid slice" aria-hidden="true">
+      <defs><linearGradient id="ca-ceu-${chave}" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1f2a3a"/><stop offset="1" stop-color="#11161d"/></linearGradient></defs>
+      <rect width="720" height="200" fill="url(#ca-ceu-${chave})"/>
+      <circle cx="640" cy="40" r="26" fill="#f2b705" opacity=".18"/>
+      <polygon points="250,200 720,200 720,176 330,176" fill="#2b2f35"/>
+      <g fill="#f2b705">${[0, 1, 2, 3, 4, 5].map((i) => `<rect x="${360 + i * 60}" y="186" width="34" height="5" rx="2"/>`).join("")}</g>
+      ${c.arte()}
+    </svg>
+    <div class="ca-txt"><div class="ca-eb">${esc(c.eb)}</div><div class="ca-t">${esc(c.t)}</div>${mini ? "" : `<div class="ca-s">${esc(c.s)}</div>`}</div>
+  </div>`;
+}
+
+/* ---------- Figurinhas ---------- */
+const FIGS = { balanca: { nome: "Fiscal da Balança", cor: "#f2b705" } };
+function figHTML(id, ganha) {
+  const f = FIGS[id];
+  return `<div class="fig${ganha ? "" : " bloq"}" title="${esc(f.nome)}">
+    <svg viewBox="0 0 120 120" aria-hidden="true"><circle cx="60" cy="60" r="56" fill="${ganha ? f.cor : "#3a3f46"}"/><circle cx="60" cy="60" r="46" fill="#15171a"/>
+    ${ganha ? svgBalancaIcone(30, 22, 0.5) + `<rect x="34" y="84" width="52" height="8" rx="2" fill="#f2b705"/>` : `<text x="60" y="72" text-anchor="middle" font-size="34" fill="#5d636b">?</text>`}</svg>
+    <span>${ganha ? esc(f.nome) : "A conquistar"}</span></div>`;
+}
+
+/* ---------- Cena: caminhão na balança ---------- */
+function cenaBalanca(m, host) {
+  const p = P(m.id);
+  const PASSOS = [
+    { t: "1. Chegada", truck: 30, visor: 0, pol: "Bom dia! Caminhão de carga: vamos passar na balança.", mot: "Tô levando areia, chefe. Tá tudo certo!" },
+    { t: "2. Pesagem", truck: 280, visor: 26000, plaq: true, pol: "A balança marcou 26.000 kg. Pela plaqueta, o limite dele é 23.000 kg.", mot: "Mas é só um pouquinho a mais..." },
+    { t: "3. A folga da balança", truck: 280, visor: 26000, plaq: true, painel: "tol", pol: "Na balança existe uma folga de 5%. 23.000 + 5% = 24.150 kg.", mot: "Ufa! Então eu tô dentro?" },
+    { t: "4. O excesso", truck: 280, visor: 26000, plaq: true, painel: "exc", pol: "Não! 26.000 passou dos 24.150. Só conta o que passou da folga: 1.850 kg.", mot: "1.850 quilos?!" },
+    { t: "5. A multa", truck: 280, visor: 26000, plaq: true, painel: "multa", pol: "Art. 231, V, código 683-11. São 10 blocos de 200 kg, a R$ 31,92 cada, mais R$ 130,16: R$ 449,36.", mot: "QUANTO?! Socorro!", grita: true },
+    { t: "6. Transbordo", truck: 280, visor: 24100, plaq: true, painel: "transb", caixas: true, pol: "Só segue viagem depois de tirar o excesso (art. 275), por sua conta. Sem como fazer, vai para o depósito.", mot: "Tá bom, vou chamar outro caminhão." },
+    { t: "7. Sua vez", truck: 280, visor: 24100, painel: "quiz", pol: "Agora é com você: responda e ganhe a figurinha!", mot: "" }
+  ];
+  const INFO = {
+    caminhao: "O caminhão (truck): 1 eixo direcional de 6 t + 1 tandem de 17 t = 23 t de limite legal. PBT = tara + lotação.",
+    visor: "A balança aferida e certificada pelo INMETRO prevalece sobre a nota fiscal (Res. 882, art. 49, § 2º). Tolerância: 5% no peso total e 12,5% no eixo.",
+    policial: "O policial enquadra no art. 231, V, código 683-11 (excesso no PBT). Medidas: retenção do veículo e transbordo do excesso.",
+    motorista: "Quem paga a multa? Depende: único remetente que declarou peso menor → embarcador; vários remetentes ou carga sem nota → transportador (Res. 547/15)."
+  };
+  const ESE = [
+    ["E se fosse pela nota fiscal?", "Pela nota fiscal não há folga: 26.000 − 23.000 = 3.000 kg. 3.000 ÷ 200 = 15 blocos × R$ 31,92 = 478,80 + 130,16 = R$ 608,96."],
+    ["E se pesasse 24.000 kg?", "24.000 está dentro dos 24.150 kg (limite + 5%). Não há autuação."],
+    ["E se o excesso passasse de 5.000 kg?", "A faixa muda: o valor de TODOS os blocos sobe para R$ 53,20. Ex.: 5.002 kg = 26 blocos × 53,20 + 130,16 = R$ 1.513,36."]
+  ];
+  let i = 0, voz = false;
+  host.innerHTML = `
+    <div class="cena">
+      <svg class="cena-svg" viewBox="0 0 640 360" role="img" aria-label="Cena animada: caminhão na balança">
+        <defs><linearGradient id="cs-ceu" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#9fd3ff"/><stop offset="1" stop-color="#dff1ff"/></linearGradient></defs>
+        <rect width="640" height="360" fill="url(#cs-ceu)"/>
+        <circle cx="590" cy="44" r="22" fill="#ffd54a"/>
+        <path d="M0 250 Q120 200 240 240 T480 230 T640 236 V260 H0 Z" fill="#8bc77a"/>
+        <rect y="258" width="640" height="102" fill="#4a4f57"/>
+        <g fill="#f2b705">${[0, 1, 2, 3, 4, 5, 6, 7].map((k) => `<rect x="${10 + k * 82}" y="330" width="44" height="6" rx="2"/>`).join("")}</g>
+        <rect x="288" y="256" width="214" height="10" rx="2" fill="#2a2e33"/>
+        <text x="395" y="282" text-anchor="middle" font-size="11" font-weight="700" fill="#dfe3e8">BALANÇA</text>
+        <g id="cs-visor" class="hot" tabindex="0" role="button" aria-label="Visor da balança">
+          <rect x="20" y="16" width="170" height="62" rx="10" fill="#15171a" stroke="#f2b705" stroke-width="3"/>
+          <text x="105" y="34" text-anchor="middle" font-size="11" font-weight="700" fill="#f2b705">POSTO DE PESAGEM</text>
+          <text id="cs-num" x="105" y="66" text-anchor="middle" font-family="monospace" font-size="28" font-weight="700" fill="#6fd18f">0 kg</text>
+        </g>
+        <g id="cs-caixas2" opacity="0">${svgCaminhao(10, 214, 0.42, "#6a8f3a")}</g>
+        <g id="cs-truck" class="hot" tabindex="0" role="button" aria-label="Caminhão" style="transform: translateX(30px)">
+          ${svgCaminhao(0, 170, 1)}
+          <g id="cs-caixas">${[0, 1, 2].map((k) => `<rect class="cx" data-k="${k}" x="${120 + k * 30}" y="150" width="24" height="20" rx="3" fill="#8a5d00" stroke="#5a3d00"/>`).join("")}</g>
+          <g id="cs-mot" class="hot" tabindex="0" role="button" aria-label="Motorista"><circle cx="25" cy="208" r="10" fill="#f1c27d"/><path d="M14 204 Q25 192 36 204 Z" fill="#c0392b"/><circle cx="22" cy="208" r="1.6" fill="#222"/><circle cx="29" cy="208" r="1.6" fill="#222"/><path id="cs-boca" d="M21 213 Q25 216 29 213" stroke="#222" stroke-width="1.6" fill="none"/></g>
+          <g id="cs-plaq" opacity="0"><rect x="96" y="196" width="100" height="24" rx="4" fill="#fff" stroke="#1b1e22"/><text x="146" y="213" text-anchor="middle" font-size="12" font-weight="700" fill="#1b1e22">PBT 23.000 kg</text></g>
+        </g>
+        <g id="cs-pol" class="hot" tabindex="0" role="button" aria-label="Policial" transform="translate(560,170)">
+          <rect x="-16" y="32" width="32" height="52" rx="8" fill="#6b5a3e"/><rect x="-16" y="44" width="32" height="6" fill="#f2b705"/>
+          <rect x="-12" y="84" width="10" height="30" fill="#3d3326"/><rect x="2" y="84" width="10" height="30" fill="#3d3326"/>
+          <circle cx="0" cy="18" r="15" fill="#c68c53"/><rect x="-17" y="0" width="34" height="9" rx="3" fill="#3d3326"/><rect x="-19" y="7" width="38" height="4" rx="2" fill="#3d3326"/>
+          <rect x="-11" y="14" width="22" height="6" rx="3" fill="#1b1e22"/><path d="M-5 26 Q0 29 5 26" stroke="#5a3a22" stroke-width="1.6" fill="none"/>
+          <rect id="cs-braco" x="14" y="36" width="8" height="30" rx="4" fill="#6b5a3e" style="transform-origin:18px 38px"/>
+        </g>
+        <foreignObject id="cs-bp" x="330" y="86" width="300" height="80"><div xmlns="http://www.w3.org/1999/xhtml" class="balao b-pol"></div></foreignObject>
+        <foreignObject id="cs-bm" x="14" y="88" width="270" height="70"><div xmlns="http://www.w3.org/1999/xhtml" class="balao b-mot"></div></foreignObject>
+      </svg>
+      <div class="cena-ctrl">
+        <button class="btn small" id="cs-ant" aria-label="Passo anterior">◀</button>
+        <div class="cena-pontos" aria-hidden="true">${PASSOS.map((_, k) => `<span data-k="${k}"></span>`).join("")}</div>
+        <button class="btn small" id="cs-voz" aria-pressed="false">🔊 Ouvir</button>
+        <button class="btn small primary" id="cs-prox" aria-label="Próximo passo">▶</button>
+      </div>
+      <div class="cena-titulo" id="cs-tit" aria-live="polite"></div>
+      <div class="cena-falas" id="cs-falas"></div>
+      <div class="cena-painel" id="cs-painel"></div>
+      <div class="cena-toque"><span class="muted small">Toque na cena (ou aqui):</span>
+        <button class="btn small" data-h="caminhao">Caminhão</button><button class="btn small" data-h="visor">Visor</button><button class="btn small" data-h="policial">Policial</button><button class="btn small" data-h="motorista">Motorista</button></div>
+      <div class="cena-info" id="cs-info" hidden></div>
+      <div class="cena-ese" id="cs-ese" hidden>${ESE.map(([q], k) => `<button class="btn small" data-e="${k}">${esc(q)}</button>`).join("")}</div>
+    </div>`;
+  const S = (q) => host.querySelector(q);
+  const fala = (txt) => { if (!voz || !window.speechSynthesis) return; try { speechSynthesis.cancel(); const u = new SpeechSynthesisUtterance(txt); u.lang = "pt-BR"; u.rate = 1; speechSynthesis.speak(u); } catch (e) {} };
+  const mostraInfo = (k) => { const el = S("#cs-info"); el.hidden = false; el.innerHTML = `<b>${{ caminhao: "Caminhão", visor: "Visor da balança", policial: "Policial", motorista: "Motorista" }[k]}:</b> ${esc(INFO[k])}`; fala(INFO[k]); };
+  const conta = (alvo) => {
+    const el = S("#cs-num"); const ini = Number(el.dataset.v || 0);
+    if (REDUZ || ini === alvo) { el.dataset.v = alvo; el.textContent = alvo.toLocaleString("pt-BR") + " kg"; el.setAttribute("fill", alvo > 24150 ? "#ff8a80" : "#6fd18f"); return; }
+    const t0 = performance.now(), dur = 1300;
+    const step = (t) => { const f = Math.min(1, (t - t0) / dur); const v = Math.round(ini + (alvo - ini) * (1 - Math.pow(1 - f, 3))); el.textContent = v.toLocaleString("pt-BR") + " kg"; el.setAttribute("fill", v > 24150 ? "#ff8a80" : "#6fd18f"); if (f < 1) requestAnimationFrame(step); else el.dataset.v = alvo; };
+    requestAnimationFrame(step);
+  };
+  function painel(tipo) {
+    const el = S("#cs-painel");
+    if (tipo === "tol") el.innerHTML = `<div class="cp-linha"><span class="cp-num">23.000 kg</span><span>+ 5%</span><span class="cp-num">1.150 kg</span><span>=</span><span class="cp-num ok">24.150 kg</span></div><p class="small muted">Folga só existe na BALANÇA. Na nota fiscal e na CMT não há folga.</p>`;
+    else if (tipo === "exc") el.innerHTML = `<div class="cp-barra" aria-label="26.000 kg contra limite de 24.150 kg"><div class="cp-lim" style="width:${(24150 / 26000) * 100}%"><span>limite 24.150</span></div><div class="cp-sobra"><span>+1.850</span></div></div><div class="cp-linha"><span class="cp-num">26.000</span><span>−</span><span class="cp-num">24.150</span><span>=</span><span class="cp-num bad">1.850 kg</span></div>`;
+    else if (tipo === "multa") el.innerHTML = `<p class="small">1.850 ÷ 200 = 9,25 → bloco começado conta inteiro: <b>10 blocos</b></p><div class="cp-blocos">${Array.from({ length: 10 }, (_, k) => `<span style="animation-delay:${REDUZ ? 0 : k * 0.12}s">200</span>`).join("")}</div><div class="cp-linha"><span class="cp-num">10 × R$ 31,92</span><span>+</span><span class="cp-num">R$ 130,16</span><span>=</span><span class="cp-num bad">R$ 449,36</span></div><p class="small muted">R$ 31,92 é o valor da faixa de 1.001 a 3.000 kg de excesso.</p>`;
+    else if (tipo === "transb") el.innerHTML = `<p class="small">Transbordo: o excesso vai para outro veículo, às custas do proprietário, e a multa continua. Agora o visor mostra 24.100 kg, dentro do limite.</p>`;
+    else if (tipo === "quiz") {
+      const ganhou = p.fig && p.fig.balanca;
+      el.innerHTML = `<p><b>Caminhão com limite de 16.000 kg pesou 17.300 kg na balança. Qual é o excesso a autuar?</b></p>
+        <div class="opts">${[["1.300 kg", 0], ["500 kg", 1], ["Nenhum: está dentro da folga", 0]].map(([o, ok], k) => `<button class="opt" data-q="${ok}"><span class="l">${"ABC"[k]}</span><span>${o}</span></button>`).join("")}</div>
+        <div id="cs-qres"></div>${ganhou ? `<div class="cp-fig">${figHTML("balanca", true)}</div>` : ""}`;
+      el.querySelectorAll("[data-q]").forEach((b) => b.addEventListener("click", () => {
+        const ok = b.dataset.q === "1";
+        el.querySelectorAll("[data-q]").forEach((x) => { x.disabled = true; if (x.dataset.q === "1") x.classList.add("right"); });
+        if (!ok) b.classList.add("wrong");
+        const r = S("#cs-qres");
+        if (ok) { p.fig = p.fig || {}; if (!p.fig.balanca) { p.fig.balanca = today(); save(m.id); } r.innerHTML = `<div class="feedback ok"><b>Certo!</b><span>16.000 + 5% = 16.800. 17.300 − 16.800 = 500 kg. Você ganhou a figurinha!</span></div><div class="cp-fig">${figHTML("balanca", true)}</div>`; fala("Certo! Você ganhou a figurinha Fiscal da Balança."); }
+        else r.innerHTML = `<div class="feedback bad"><b>Ainda não.</b><span>Primeiro some a folga de 5%: 16.000 + 800 = 16.800 kg. O excesso é o que passa disso: 17.300 − 16.800 = 500 kg.</span></div><button class="btn small" id="cs-de-novo">Tentar de novo</button>`;
+        const dn = S("#cs-de-novo"); if (dn) dn.addEventListener("click", () => painel("quiz"));
+      }));
+    } else el.innerHTML = "";
+  }
+  function show() {
+    const ps = PASSOS[i];
+    S("#cs-tit").textContent = ps.t;
+    S("#cs-truck").style.transform = `translateX(${ps.truck}px)`;
+    conta(ps.visor);
+    S("#cs-plaq").setAttribute("opacity", ps.plaq ? 1 : 0);
+    const bp = S("#cs-bp div"), bm = S("#cs-bm div");
+    bp.textContent = ps.pol; bp.parentNode.style.display = ps.pol ? "" : "none";
+    bm.textContent = ps.mot; bm.parentNode.style.display = ps.mot ? "" : "none";
+    bm.classList.toggle("grito", !!ps.grita);
+    S("#cs-falas").innerHTML = (ps.pol ? `<p><b class="f-pol">Policial:</b> ${esc(ps.pol)}</p>` : "") + (ps.mot ? `<p class="${ps.grita ? "f-grito" : ""}"><b class="f-mot">Motorista:</b> ${esc(ps.mot)}</p>` : "");
+    S("#cs-boca").setAttribute("d", ps.grita ? "M21 212 Q25 220 29 212 Z" : "M21 213 Q25 216 29 213");
+    S("#cs-braco").classList.toggle("aponta", i >= 1 && i <= 5);
+    host.querySelectorAll("#cs-caixas .cx").forEach((c, k) => c.classList.toggle("sai", !!ps.caixas));
+    S("#cs-caixas2").setAttribute("opacity", ps.caixas ? 1 : 0);
+    painel(ps.painel);
+    S("#cs-ese").hidden = i < 3;
+    host.querySelectorAll(".cena-pontos span").forEach((d) => d.classList.toggle("on", Number(d.dataset.k) === i));
+    S("#cs-ant").disabled = i === 0; S("#cs-prox").disabled = i === PASSOS.length - 1;
+    fala([ps.pol, ps.mot].filter(Boolean).join(" "));
+  }
+  S("#cs-ant").addEventListener("click", () => { if (i > 0) { i--; show(); } });
+  S("#cs-prox").addEventListener("click", () => { if (i < PASSOS.length - 1) { i++; show(); } });
+  S("#cs-voz").addEventListener("click", () => { voz = !voz; S("#cs-voz").setAttribute("aria-pressed", String(voz)); S("#cs-voz").textContent = voz ? "🔊 Voz ligada" : "🔊 Ouvir"; if (!window.speechSynthesis) { S("#cs-voz").textContent = "Voz indisponível"; S("#cs-voz").disabled = true; return; } if (voz) show(); else try { speechSynthesis.cancel(); } catch (e) {} });
+  const hot = { "#cs-truck": "caminhao", "#cs-visor": "visor", "#cs-pol": "policial", "#cs-mot": "motorista" };
+  Object.entries(hot).forEach(([sel, k]) => { const el = S(sel); el.addEventListener("click", (e) => { e.stopPropagation(); mostraInfo(k); }); el.addEventListener("keydown", (e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); mostraInfo(k); } }); });
+  host.querySelectorAll("[data-h]").forEach((b) => b.addEventListener("click", () => mostraInfo(b.dataset.h)));
+  host.querySelectorAll("[data-e]").forEach((b) => b.addEventListener("click", () => { const [q, r] = ESE[Number(b.dataset.e)]; const el = S("#cs-info"); el.hidden = false; el.innerHTML = `<b>${esc(q)}</b> ${esc(r)}`; fala(r); }));
+  show();
+}
+const CENAS = { balanca: cenaBalanca };
+
 /* ---------- Aulas (microaulas com atividades) ---------- */
 function missao(m) {
   const p = P(m.id), done = p.aulas || {};
@@ -26419,7 +26666,8 @@ function renderAulas(m, body) {
     <div class="card hero-review"><span class="tag">Sua próxima missão</span><p>${esc(ms.txt)}</p>
       <div class="row">${ms.aula ? `<button class="btn primary" data-a="${ms.aula}">Abrir a aula</button>` : ""}${ms.go === "erros" ? `<button class="btn primary" id="ms-err">Revisar erros</button>` : ""}${ms.sim ? `<button class="btn primary" id="ms-sim">Começar</button>` : ""}</div></div>
     <p class="intro">${feitas} de ${m.aulas.length} aulas estudadas. Em cada aula: pense na situação antes de ler a explicação, faça as atividades e escreva com suas palavras. Ao concluir, a data fica registrada; os erros nas questões da aula voltam pelo caderno em 1, 7 e 30 dias.</p>
-    <div class="subjects">${m.aulas.map((a) => `<button class="card subject" data-a="${a.id}"><div class="spread"><span class="tag">Aula ${a.n} · ${a.min} min</span><span class="muted small">${done[a.id] ? "✓ estudada em " + dm(done[a.id]) : "não estudada"}</span></div><div class="name">${esc(a.titulo)}</div></button>`).join("")}</div>`;
+    ${(() => { const cs = m.aulas.filter((a) => a.cena && FIGS[a.cena]); if (!cs.length) return ""; const ff = P(m.id).fig || {}; return `<div class="card"><span class="tag">Álbum de figurinhas · ${cs.filter((a) => ff[a.cena]).length} de ${cs.length}</span><div class="album">${cs.map((a) => figHTML(a.cena, !!ff[a.cena])).join("")}</div><p class="muted small">Assista às cenas animadas e acerte a pergunta final para ganhar a figurinha.</p></div>`; })()}
+    <div class="subjects">${m.aulas.map((a) => `<button class="card subject${a.capa ? " com-capa" : ""}" data-a="${a.id}">${a.capa ? capaHTML(a.capa, true) : ""}<div class="spread"><span class="tag">Aula ${a.n} · ${a.min} min${a.cena ? " · cena animada" : ""}</span><span class="muted small">${done[a.id] ? "✓ estudada em " + dm(done[a.id]) : "não estudada"}</span></div><div class="name">${esc(a.titulo)}</div></button>`).join("")}</div>`;
   body.querySelectorAll("[data-a]").forEach((b) => b.addEventListener("click", () => renderAula(m, body, m.aulas.find((a) => a.id === b.dataset.a))));
   if ($("#ms-err")) $("#ms-err").addEventListener("click", () => renderTreino(m, body, errDue(m), "Revisão do caderno de erros"));
   if ($("#ms-sim")) $("#ms-sim").addEventListener("click", () => renderSimulado(m, body, simsDe(m).find((s) => s.id === ms.sim)));
@@ -26463,7 +26711,9 @@ function renderAula(m, body, a) {
   const tq = tm ? tm.questoes.filter((q) => q.tema === a.treino.tema) : [];
   body.innerHTML = `<button class="btn small back" id="au-back">← Aulas</button>
     <div class="card lesson">
+      ${a.capa ? capaHTML(a.capa) : ""}
       <span class="tag">Aula ${a.n} · ${a.min} min</span><h2>${esc(a.titulo)}</h2>
+      ${a.cena && CENAS[a.cena] ? `<div class="lsec"><h3>Cena animada</h3><p class="muted small">Avance com ▶, toque nos personagens e no visor, e teste os botões "E se…?". Ligue a voz se quiser ouvir.</p><div id="au-cena"></div></div>` : ""}
       ${sec("Objetivo", `<p>${esc(a.objetivo)}</p>`)}
       ${a.previo ? sec("Antes de começar, você precisa saber", `<p>${esc(a.previo)}</p>`) : ""}
       ${sec("Situação", `<p>${esc(a.situacao)}</p><textarea class="short" aria-label="O que você faria?" placeholder="O que você pensa ou faria? Escreva antes de continuar."></textarea><div class="row"><button class="btn primary" id="au-rev">Continuar</button></div>`)}
@@ -26481,6 +26731,7 @@ function renderAula(m, body, a) {
       </div>
     </div>`;
   $("#au-back").addEventListener("click", () => renderAulas(m, body));
+  if (a.cena && CENAS[a.cena]) CENAS[a.cena](m, $("#au-cena"));
   $("#au-rev").addEventListener("click", () => { $("#au-corpo").hidden = false; $("#au-rev").hidden = true; });
   a.atividades.forEach((x, j) => ligaAtividade($("#at" + j), x));
   $("#au-ok").addEventListener("click", () => { p.aulas = p.aulas || {}; p.aulas[a.id] = today(); save(m.id); renderAulas(m, body); });
