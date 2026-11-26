@@ -192,6 +192,31 @@ input.num { font: inherit; font-size: 17px; padding: 9px 12px; border-radius: 9p
 .liga label { display: flex; flex-direction: column; gap: 4px; font-size: 15.5px; }
 .pool { display: flex; flex-wrap: wrap; gap: 6px; }
 .seq { margin: 0; padding-left: 22px; display: flex; flex-direction: column; gap: 4px; min-height: 8px; }
+
+/* Capa de entrada (sempre escura, como a imagem de capa) */
+body.na-capa header { display: none; }
+.capa { position: relative; overflow: hidden; border-radius: 16px; min-height: 560px; color: #eceef0;
+  background: radial-gradient(700px 420px at 90% 110%, #2a2410 0%, transparent 60%), linear-gradient(160deg, #1c1f24 0%, #111316 55%, #0b0c0e 100%); }
+.capa-road { position: absolute; right: -30%; bottom: 0; width: 72%; height: 100%; opacity: .5; }
+.capa::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(14,16,19,.92) 0%, rgba(14,16,19,.6) 55%, rgba(14,16,19,0) 85%); pointer-events: none; z-index: 0; }
+.capa-txt { position: relative; z-index: 1; padding: 40px 32px 32px; display: flex; flex-direction: column; gap: 14px; max-width: 560px; }
+.capa-eb { font-family: var(--font-display); font-weight: 700; letter-spacing: .16em; font-size: 15px; color: #f2b705; text-transform: uppercase; }
+.capa-h { font-family: var(--font-display); font-weight: 800; font-size: clamp(56px, 12vw, 92px); line-height: .9; text-transform: uppercase; }
+.capa-h span { color: #f2b705; }
+.capa-dash { height: 7px; width: min(320px, 70%); background: repeating-linear-gradient(90deg, #f2b705 0 36px, transparent 36px 58px); border-radius: 2px; }
+.capa-sub { margin: 0; font-size: 19px; font-weight: 600; color: #d6d9dd; max-width: 26em; }
+.capa-chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.capa-chips span { font-family: var(--font-display); font-weight: 700; font-size: 15px; letter-spacing: .05em; text-transform: uppercase; border: 2px solid #3a3f46; border-radius: 8px; padding: 5px 10px; background: rgba(255,255,255,.04); }
+.capa-chips b { color: #f2b705; }
+.capa-btn { background: #f2b705; border-color: #f2b705; color: #15171a; font-size: 17px; padding: 12px 20px; }
+.capa-foot { font-family: var(--font-display); font-weight: 600; font-size: 14px; letter-spacing: .14em; text-transform: uppercase; color: #8b9198; margin-top: 8px; }
+.passos { margin: 0; padding-left: 22px; display: flex; flex-direction: column; gap: 10px; font-size: 16px; }
+@media (max-width: 600px) {
+  .capa { min-height: 640px; }
+  .capa-road { width: 100%; right: -50%; opacity: .45; }
+  .capa-txt { padding: 28px 20px 24px; }
+  .capa-eb { font-size: 13px; letter-spacing: .12em; }
+}
 @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
 </style>
 
@@ -6400,6 +6425,2606 @@ input.num { font: inherit; font-size: 17px; padding: 9px 12px; border-radius: 9p
     ],
     "abertas": [],
     "aviso": "Cada questão segue o assunto e o estilo da prova da turma 2026.4. A primeira questão de cada tema é a original da prova, com o gabarito comentado; as demais são variações tiradas da apostila."
+   }
+  },
+  {
+   "id": "prova-prevista-lt5",
+   "nome": "Prova Prevista: Legislação de Trânsito V",
+   "area": "Prova de 10 questões · previsão",
+   "fonte": "Slides Fiscalização de Veículo de Carga (CPOR 2026) e Slides Excesso de Peso e CMT (CPOR 2026). Formato e estilo tirados da prova de Trânsito II (2026.4) do SGT PM Fortunato.",
+   "resumo": [
+    {
+     "titulo": "Como esta prova foi montada",
+     "itens": [
+      "Não chegaram imagens do instrutor nem prova anterior desta disciplina. Por isso os 10 temas são PREVISÃO, na ordem dos slides, e podem mudar.",
+      "O formato segue a prova de Trânsito II da turma 2026.4, do SGT PM Fortunato, que também dá esta matéria: 10 questões de múltipla escolha, 1 ponto cada, com 'Julgue', 'EXCETO', 'INCORRETA' e casos.",
+      "Pegadinhas daquela prova que valem aqui: palavras absolutas ('sempre', 'toda', 'nunca') costumam tornar a frase falsa; 'N.R.A.' aparece como alternativa.",
+      "Se o instrutor mostrar imagens ou indicar os temas, mande para mim que eu ajusto a prova."
+     ]
+    },
+    {
+     "titulo": "Os 10 temas",
+     "itens": [
+      "1. Normas e capacidade do veículo: tara, lotação, PBT, PBTC, CMT, AET e AE",
+      "2. Dimensões: largura, altura, comprimentos e balanço traseiro",
+      "3. Eixos e PBTC das composições (carreta, LS, bitrem, rodotrem...)",
+      "4. CVC com AET: art. 18, requisitos do art. 19, horário e exceções",
+      "5. Limite técnico, inscrições do veículo e limite regulamentar",
+      "6. Balança x nota fiscal: tolerâncias e regra dos 50 t",
+      "7. Quem responde pelo excesso: embarcador, transportador ou os dois",
+      "8. AIT e cálculo da multa de excesso de peso",
+      "9. Excesso de CMT: enquadramento e multa",
+      "10. Medidas administrativas e qual artigo aplicar (art. 60 da Res. 882)"
+     ]
+    },
+    {
+     "titulo": "Os números que mais caem",
+     "itens": [
+      "2,60 m / 4,40 m / 14 m / 19,30 m (cavalo + SR) / 19,80 m.",
+      "Eixos: 6 / 10 / 17 / 25,5 t. Bitrem 57 t sem AET; rodotrem 74 t com AET.",
+      "AET: mais de 2 unidades e mais de 57 t ou mais de 19,80 m; teto 74 t e 30 m; acima de 57 t, 25 a 30 m; dia, 80 km/h.",
+      "Balança 5% (total) e 12,5% (eixo); até 50 t só o total; nota fiscal e CMT sem tolerância; biodiesel 7,5%.",
+      "Multa de peso: (excesso ÷ 200, para cima) x FM + R$ 130,16. CMT: até 600 média, até 1.000 grave, acima gravíssima x blocos de 500 kg (R$ 293,47)."
+     ]
+    }
+   ],
+   "questoes": [
+    {
+     "id": "p5e1",
+     "tipo": "mc",
+     "tema": 1,
+     "dif": 2,
+     "orig": "autoral",
+     "conf": "material",
+     "p": "ESTILO PROVA · Julgue: I. PBT é a soma da tara com a lotação. II. Em veículo de carga, a lotação não inclui o condutor. III. A CMT é indicada pelo fabricante. IV. A AET pode ser emitida pelo agente durante a abordagem. Assinale:",
+     "op": [
+      "As assertivas I e II estão corretas.",
+      "As assertivas I e III estão corretas.",
+      "As assertivas II e IV estão corretas.",
+      "As assertivas I, III e IV estão corretas.",
+      "Todas as assertivas estão corretas."
+     ],
+     "r": 1,
+     "exp": "I e III verdadeiras. II é falsa: a lotação inclui condutor e passageiros. IV é falsa: AET e AE são emitidas única e exclusivamente pelos OEER.",
+     "oc": [
+      "Falsa. A II é falsa (a lotação inclui o condutor).",
+      "Correta. Só I e III são verdadeiras.",
+      "Falsa. II e IV são as duas falsas.",
+      "Falsa. A IV é falsa: o agente não emite AET.",
+      "Falsa. II e IV são falsas."
+     ],
+     "ref": "Slides Fiscalização de Veículo de Carga (CPOR 2026), slides 39 a 41.",
+     "rev": "Tema 1: conceitos de capacidade e quem emite AET/AE."
+    },
+    {
+     "id": "p5e2",
+     "tipo": "mc",
+     "tema": 2,
+     "dif": 2,
+     "orig": "autoral",
+     "conf": "material",
+     "p": "ESTILO PROVA · Sobre as dimensões máximas sem AET ou AE (Res. 882/21, art. 4º), todas estão corretas, EXCETO:",
+     "op": [
+      "Largura máxima de 2,60 m.",
+      "Altura máxima de 4,40 m.",
+      "Veículo não articulado: até 14,00 m.",
+      "Caminhão-trator com semirreboque: até 19,80 m.",
+      "Caminhão com reboque: até 19,80 m."
+     ],
+     "r": 3,
+     "exp": "A questão pede a EXCETO. Cavalo + semirreboque vai até 19,30 m; 19,80 m é de caminhão com reboque e de mais de duas unidades.",
+     "oc": [
+      "Afirmação correta, então não é a resposta.",
+      "Afirmação correta, então não é a resposta.",
+      "Afirmação correta, então não é a resposta.",
+      "É a resposta: a frase é falsa. O limite do cavalo + semirreboque é 19,30 m.",
+      "Afirmação correta, então não é a resposta."
+     ],
+     "ref": "Slides Fiscalização de Veículo de Carga (CPOR 2026), slides 48 a 62.",
+     "rev": "Tema 2: comprimentos por tipo de veículo."
+    },
+    {
+     "id": "p5e3",
+     "tipo": "mc",
+     "tema": 3,
+     "dif": 2,
+     "orig": "autoral",
+     "conf": "material",
+     "p": "ESTILO PROVA · Assinale a alternativa INCORRETA quanto ao PBTC das composições:",
+     "op": [
+      "Carreta (6 + 10 + 17): 33 t.",
+      "Carreta LS (6 + 17 + 25,5): 48,5 t.",
+      "Bitrem: 57 t, sem AET.",
+      "Rodotrem: 74 t, com AET.",
+      "Romeu e Julieta: 53 t."
+     ],
+     "r": 4,
+     "exp": "A questão pede a INCORRETA. Romeu e Julieta (6 + 10 + 10 + 10) tem 36 t; 53 t é a vanderléia.",
+     "oc": [
+      "Afirmação correta, então não é a resposta.",
+      "Afirmação correta, então não é a resposta.",
+      "Afirmação correta, então não é a resposta.",
+      "Afirmação correta, então não é a resposta.",
+      "É a resposta: a frase é falsa. Romeu e Julieta tem 36 t; 53 t é a vanderléia."
+     ],
+     "ref": "Slides Fiscalização de Veículo de Carga (CPOR 2026), slides 113 a 123.",
+     "rev": "Tema 3: PBTC das composições."
+    },
+    {
+     "id": "p5e4",
+     "tipo": "mc",
+     "tema": 4,
+     "dif": 3,
+     "orig": "autoral",
+     "conf": "material",
+     "p": "ESTILO PROVA · Julgue: I. CVC com mais de duas unidades e PBTC acima de 57 t só circula com AET. II. A AET exige PBTC igual ou inferior a 74 t. III. A CVC com AET pode circular 24 horas, em qualquer via, a até 90 km/h. IV. Com PBTC acima de 57 t, o comprimento deve ficar entre 25 m e 30 m. Assinale:",
+     "op": [
+      "Todas as sentenças são verdadeiras.",
+      "Possui apenas uma sentença falsa.",
+      "Possui apenas duas sentenças falsas.",
+      "Possui três sentenças falsas.",
+      "Todas as sentenças são falsas."
+     ],
+     "r": 1,
+     "exp": "Só a III é falsa: em regra, a CVC com AET roda do amanhecer ao pôr do sol, a até 80 km/h (art. 20). I, II e IV estão nos arts. 18 e 19.",
+     "oc": [
+      "Falsa. A III é falsa.",
+      "Correta. Só a III é falsa.",
+      "Falsa. Só há uma falsa.",
+      "Falsa. Só há uma falsa.",
+      "Falsa. I, II e IV são verdadeiras."
+     ],
+     "ref": "Slides Fiscalização de Veículo de Carga (CPOR 2026), slides 132 a 135.",
+     "rev": "Tema 4: arts. 18, 19 e 20 da Res. 882."
+    },
+    {
+     "id": "p5e5",
+     "tipo": "mc",
+     "tema": 5,
+     "dif": 3,
+     "orig": "autoral",
+     "conf": "material",
+     "p": "ESTILO PROVA · Caminhão toco: limite legal 6 t (dianteiro) + 10 t (traseiro); limite técnico 5,5 t (dianteiro) + 9,5 t (traseiro). O limite regulamentar é:",
+     "op": [
+      "16 t",
+      "15 t",
+      "15,5 t",
+      "14,5 t",
+      "16,5 t"
+     ],
+     "r": 1,
+     "exp": "Compare eixo a eixo e fique com o menor: dianteiro 5,5 (técnico) e traseiro 9,5 (técnico). 5,5 + 9,5 = 15 t.",
+     "oc": [
+      "Falsa. É só o limite legal.",
+      "Correta. 5,5 + 9,5 = 15 t.",
+      "Falsa. Não corresponde ao menor eixo a eixo.",
+      "Falsa. Ficou abaixo dos dois limites.",
+      "Falsa. Somou valores maiores que os dois limites."
+     ],
+     "ref": "Slides Fiscalização de Veículo de Carga (CPOR 2026), slides 202 a 210.",
+     "rev": "Tema 5: limite regulamentar = menor, eixo a eixo."
+    },
+    {
+     "id": "p5e6",
+     "tipo": "mc",
+     "tema": 6,
+     "dif": 2,
+     "orig": "autoral",
+     "conf": "material",
+     "p": "ESTILO PROVA · Sobre as tolerâncias na fiscalização de peso, assinale a CORRETA:",
+     "op": [
+      "Na nota fiscal, admite-se 5% sobre o peso declarado.",
+      "Na CMT, admite-se 5% de tolerância.",
+      "Na balança, admite-se 5% no PBT/PBTC e 12,5% no peso por eixo.",
+      "Para biodiesel B100, a tolerância é de 12,5% no PBT.",
+      "Veículo com PBT de até 50 t é sempre fiscalizado por eixo."
+     ],
+     "r": 2,
+     "exp": "Balança: 5% no total e 12,5% no eixo (Lei 7.408 e Res. 882, art. 50).",
+     "oc": [
+      "Falsa. Na nota fiscal não há tolerância (art. 49, § 3º).",
+      "Falsa. Na CMT não há tolerância.",
+      "Correta.",
+      "Falsa. Para o biodiesel B100 a tolerância é de 7,5%.",
+      "Falsa. Até 50 t, só o total é fiscalizado; o eixo entra apenas se o total passar da tolerância (art. 50, §§ 1º e 2º)."
+     ],
+     "ref": "Slides Excesso de Peso e CMT (CPOR 2026), slides 12 a 16, 29 e 44.",
+     "rev": "Tema 6: tolerâncias por modalidade."
+    },
+    {
+     "id": "p5e7",
+     "tipo": "mc",
+     "tema": 7,
+     "dif": 2,
+     "orig": "autoral",
+     "conf": "material",
+     "p": "ESTILO PROVA · Carga de um único remetente, com peso declarado na nota fiscal inferior ao aferido na balança. Pela Res. 547/15, responde pelo excesso:",
+     "op": [
+      "O transportador.",
+      "O embarcador.",
+      "O condutor.",
+      "Embarcador e transportador, solidariamente.",
+      "N.R.A."
+     ],
+     "r": 1,
+     "exp": "Único remetente que declarou peso menor que o aferido: embarcador (CTB, art. 257, § 4º; Res. 547/15, art. 6º).",
+     "oc": [
+      "Falsa. Transportador é para carga sem nota, sem peso declarado ou de vários remetentes.",
+      "Correta.",
+      "Falsa. O condutor responde pelos atos na direção.",
+      "Falsa. A solidariedade é quando o peso declarado já supera o limite legal.",
+      "Falsa. A alternativa B está correta."
+     ],
+     "ref": "Slides Excesso de Peso e CMT (CPOR 2026), slides 50 a 54.",
+     "rev": "Tema 7: tabela da Res. 547/15."
+    },
+    {
+     "id": "p5e8",
+     "tipo": "mc",
+     "tema": 8,
+     "dif": 3,
+     "orig": "autoral",
+     "conf": "material",
+     "p": "ESTILO PROVA · Caminhão com PBT regulamentar de 16.000 kg, aferido em balança com 18.000 kg. O excesso considerado e o valor da multa são:",
+     "op": [
+      "1.200 kg e R$ 321,68.",
+      "2.000 kg e R$ 449,36.",
+      "1.200 kg e R$ 289,76.",
+      "800 kg e R$ 215,28.",
+      "N.R.A."
+     ],
+     "r": 0,
+     "exp": "Limite com tolerância: 16.000 x 1,05 = 16.800 kg. Excesso: 1.200 kg. 1.200 ÷ 200 = 6 blocos; faixa 1.001–3.000: FM 31,92. 6 x 31,92 = 191,52 + 130,16 = R$ 321,68.",
+     "oc": [
+      "Correta.",
+      "Falsa. Esqueceu a tolerância de 5% (18.000 − 16.000).",
+      "Falsa. Usou 5 blocos; 1.200 ÷ 200 dá 6.",
+      "Falsa. Excesso e faixa errados.",
+      "Falsa. A alternativa A está correta."
+     ],
+     "ref": "Slides Excesso de Peso e CMT (CPOR 2026), slides 27, 48, 62 e 63.",
+     "rev": "Tema 8: tolerância, blocos de 200 kg e FM."
+    },
+    {
+     "id": "p5e9",
+     "tipo": "mc",
+     "tema": 9,
+     "dif": 3,
+     "orig": "autoral",
+     "conf": "material",
+     "p": "ESTILO PROVA · Excesso de 2.300 kg sobre a capacidade máxima de tração (CMT). Enquadramento e multa:",
+     "op": [
+      "689-00, grave: R$ 195,23.",
+      "690-40, gravíssima: R$ 1.467,35.",
+      "690-40, gravíssima: R$ 1.173,88.",
+      "688-20, média: R$ 130,16, após descontar 5% de tolerância.",
+      "N.R.A."
+     ],
+     "r": 1,
+     "exp": "Acima de 1.000 kg: gravíssima (690-40), a cada 500 kg ou fração. 2.300 ÷ 500 = 4,6, arredonda para 5. 5 x 293,47 = R$ 1.467,35. Cálculo pela regra do art. 58; os slides não trazem este número.",
+     "oc": [
+      "Falsa. Grave é de 601 a 1.000 kg.",
+      "Correta.",
+      "Falsa. Usou 4 blocos, ignorando a fração.",
+      "Falsa. Na CMT não há tolerância, e o excesso passa de 1.000 kg.",
+      "Falsa. A alternativa B está correta."
+     ],
+     "ref": "Slides Excesso de Peso e CMT (CPOR 2026), slides 72 a 75.",
+     "rev": "Tema 9: faixas da CMT e blocos de 500 kg."
+    },
+    {
+     "id": "p5e10",
+     "tipo": "mc",
+     "tema": 10,
+     "dif": 2,
+     "orig": "autoral",
+     "conf": "material",
+     "p": "ESTILO PROVA · Carreta com excesso de PBT acima da tolerância. A carga não é perigosa, perecível nem viva, e não há como transbordar no local. Qual a conduta correta?",
+     "op": [
+      "Liberar mediante termo de compromisso de descarregar no destino.",
+      "Autuar pela parcela acima da tolerância, reter e, sem transbordo possível, recolher o veículo ao depósito.",
+      "Autuar no art. 187, I, por desrespeito à sinalização.",
+      "Aplicar só a multa, sem medida administrativa.",
+      "Apreender a CNH do condutor."
+     ],
+     "r": 1,
+     "exp": "O transbordo é condição para prosseguir (CTB, art. 275). Sem como fazer, o veículo vai ao depósito até sanar e pagar remoção e estada. A dispensa só cabe para perigosos, perecíveis e cargas vivas.",
+     "oc": [
+      "Falsa. Promessa não regulariza; o transbordo é condição para seguir.",
+      "Correta.",
+      "Falsa. Excesso de peso é art. 231, V, e não 187.",
+      "Falsa. Há retenção e transbordo.",
+      "Falsa. Não há essa medida para excesso de peso."
+     ],
+     "ref": "Slides Excesso de Peso e CMT (CPOR 2026), slides 79 a 87.",
+     "rev": "Tema 10: transbordo, depósito e dispensa."
+    },
+    {
+     "id": "p5q01",
+     "tipo": "mc",
+     "dif": 1,
+     "orig": "autoral",
+     "conf": "material",
+     "p": "Qual norma estabelece os limites de peso e dimensões dos veículos que transitam pelas vias terrestres?",
+     "op": [
+      "Resolução CONTRAN nº 985/2022",
+      "Resolução CONTRAN nº 882/2021",
+      "Resolução CONTRAN nº 952/2022",
+      "Portaria SENATRAN nº 268/2022",
+      "Resolução CONTRAN nº 973/2022"
+     ],
+     "r": 1,
+     "exp": "A Res. 882/21 é a norma de pesos e dimensões. Ela revogou 26 resoluções antigas e juntou o tema num só texto.",
+     "oc": [
+      "Falsa. A 985/22 aprova o MBFT (fichas de fiscalização), e não os limites.",
+      "Correta. É a norma de limites de peso e dimensões.",
+      "Falsa. A 952/22 trata do para-choque traseiro dos veículos de carga.",
+      "Falsa. A Portaria 268/22 homologa as composições e os seus limites, mas quem estabelece as regras gerais é a Res. 882/21 (que inclusive manda publicar essa portaria, art. 28, § 1º).",
+      "Falsa. A 973/22 é o Regulamento de Sinalização Viária."
+     ],
+     "ref": "Slides Fiscalização de Veículo de Carga (CPOR 2026), slides 5, 6 e 36.",
+     "rev": "Tema 1 · Aula 1: as normas da matéria.",
+     "dica": "Procure a resolução 'compilada' que revogou 26 outras.",
+     "tema": 1
+    },
+    {
+     "id": "p5q02",
+     "tipo": "vf",
+     "dif": 1,
+     "orig": "autoral",
+     "conf": "material",
+     "p": "A Portaria SENATRAN nº 268/2022 homologa os veículos e as combinações de veículos de carga e de passageiros, com seus limites de pesos e dimensões.",
+     "r": true,
+     "exp": "Verdadeiro. A Res. 882/21 (art. 28, § 1º) manda o órgão máximo executivo da União publicar portaria com as composições homologadas, e essa portaria é a 268/22.",
+     "ref": "Slides Fiscalização de Veículo de Carga (CPOR 2026), slides 18 e 36.",
+     "rev": "Tema 1 · Aula 1.",
+     "tema": 1
+    },
+    {
+     "id": "p5q03",
+     "tipo": "mc",
+     "dif": 2,
+     "orig": "autoral",
+     "conf": "material",
+     "p": "A Lei 14.440/2022 criou quatro novas infrações. Qual ato criou os códigos de enquadramento dessas infrações?",
+     "op": [
+      "Resolução CONTRAN nº 882/2021",
+      "Portaria SENATRAN nº 268/2022",
+      "Portaria SENATRAN nº 1.230/2022, alterando o anexo IV da Portaria SENATRAN nº 354/2022",
+      "Resolução CONTRAN nº 985/2022, por ser o MBFT"
+     ],
+     "r": 2,
+     "exp": "O SENATRAN, como órgão máximo executivo do SNT, editou a Portaria 1.230/22 criando os códigos e alterando o anexo IV da Portaria 354/22.",
+     "oc": [
+      "Falsa. A 882/21 é anterior à lei e trata de limites de peso e dimensões, não de códigos.",
+      "Falsa. A 268/22 homologa composições.",
+      "Correta. É o exemplo dado nos slides.",
+      "Falsa. O MBFT traz as fichas de fiscalização; os códigos de enquadramento estão na Portaria 354/22, alterada pela 1.230/22."
+     ],
+     "ref": "Slides Fiscalização de Veículo de Carga (CPOR 2026), slide 17.",
+     "rev": "Tema 1 · Aula 1: SENATRAN e portarias.",
+     "tema": 1
+    },
+    {
+     "id": "p5q04",
+     "tipo": "vf",
+     "dif": 1,
+     "orig": "autoral",
+     "conf": "material",
+     "p": "A Resolução CONTRAN nº 882/2021 revogou 26 resoluções antigas, unificando num só texto as resoluções de um mesmo tema.",
+     "r": true,
+     "exp": "Verdadeiro. Os slides citam isso como exemplo de resolução compilada, que facilita a consulta.",
+     "ref": "Slides Fiscalização de Veículo de Carga (CPOR 2026), slide 6.",
+     "rev": "Tema 1 · Aula 1.",
+     "tema": 1
+    },
+    {
+     "id": "p5q05",
+     "tipo": "mc",
+     "dif": 1,
+     "orig": "autoral",
+     "conf": "material",
+     "p": "O peso bruto total (PBT) de um veículo é:",
+     "op": [
+      "A tara somada à CMT.",
+      "A lotação, sem a tara.",
+      "A tara somada à lotação.",
+      "O PBTC menos a tara do reboque.",
+      "O peso medido na balança no momento da fiscalização."
+     ],
+     "r": 2,
+     "exp": "PBT é o peso máximo que o veículo transmite ao pavimento: tara + lotação.",
+     "oc": [
+      "Falsa. CMT é capacidade de tração do cavalo, não parte do PBT.",
+      "Falsa. Lotação é só a carga útil; falta somar o peso do próprio veículo (tara).",
+      "Correta. É a definição da Res. 882 e do Anexo I do CTB.",
+      "Falsa. PBTC é da combinação; essa subtração não define PBT.",
+      "Falsa. O peso da balança é o peso aferido (o real do momento). O PBT é um limite do veículo, que se compara com o aferido."
+     ],
+     "ref": "Slides Fiscalização de Veículo de Carga (CPOR 2026), slide 39.",
+     "rev": "Tema 1 · Aula 2: tara, lotação e PBT.",
+     "tema": 1
+    },
+    {
+     "id": "p5q06",
+     "tipo": "mc",
+     "dif": 2,
+     "orig": "autoral",
+     "conf": "material",
+     "p": "Assinale o item que NÃO compõe a tara de um veículo de carga.",
+     "op": [
+      "Combustível",
+      "Roda sobressalente",
+      "Extintor de incêndio",
+      "Condutor e passageiros",
+      "Fluido de arrefecimento"
+     ],
+     "r": 3,
+     "exp": "A questão pede o que NÃO está na tara. Condutor e passageiros estão na lotação (carga útil máxima, incluindo condutor e passageiros).",
+     "oc": [
+      "Compõe a tara, então não é a resposta.",
+      "Compõe a tara (roda sobressalente), então não é a resposta.",
+      "Compõe a tara, então não é a resposta.",
+      "É a resposta: as pessoas entram na LOTAÇÃO, não na tara.",
+      "Compõe a tara, então não é a resposta."
+     ],
+     "ref": "Slides Fiscalização de Veículo de Carga (CPOR 2026), slide 39.",
+     "rev": "Tema 1 · Aula 2: o que entra na tara.",
+     "dica": "Releia a definição de lotação: ela inclui quem?",
+     "tema": 1
+    },
+    {
+     "id": "p5q07",
+     "tipo": "mc",
+     "dif": 1,
+     "orig": "autoral",
+     "conf": "material",
+     "p": "Capacidade máxima de tração (CMT) é:",
+     "op": [
+      "O peso máximo que o veículo transmite ao pavimento.",
+      "O máximo peso que a unidade de tração é capaz de tracionar, indicado pelo fabricante.",
+      "O peso da combinação inteira com a tolerância de 5%.",
+      "O peso máximo permitido por eixo pela Res. 882/21.",
+      "A soma da tara do cavalo com a do semirreboque."
+     ],
+     "r": 1,
+     "exp": "CMT é o máximo que o cavalo consegue tracionar, indicado pelo fabricante a partir dos limites de motor e transmissão.",
+     "oc": [
+      "Falsa. Isso é PBT (ou PBTC, na combinação).",
+      "Correta. Definição da Res. 882 e do Anexo I do CTB.",
+      "Falsa. CMT não tem tolerância, e não é o PBTC.",
+      "Falsa. Limite por eixo é o art. 6º da Res. 882 (6, 10, 17, 25,5 t).",
+      "Falsa. Soma de taras não é capacidade de tração."
+     ],
+     "ref": "Slides Fiscalização de Veículo de Carga (CPOR 2026), slide 40.",
+     "rev": "Tema 1 · Aula 2: CMT.",
+     "tema": 1
+    },
+    {
+     "id": "p5q08",
+     "tipo": "vf",
+     "dif": 1,
+     "orig": "autoral",
+     "conf": "material",
+     "p": "Pelo Anexo I do CTB (redação da Lei 14.440/2022), caminhão é o veículo automotor destinado ao transporte de carga com peso bruto total superior a 3.500 kg.",
+     "r": true,
+     "exp": "Verdadeiro. É a definição citada nos slides.",
+     "ref": "Slides Fiscalização de Veículo de Carga (CPOR 2026), slide 44.",
+     "rev": "Tema 1 · Aula 2: tipos de veículo.",
+     "tema": 1
+    },
+    {
+     "id": "p5q09",
+     "tipo": "mc",
+     "dif": 1,
+     "orig": "autoral",
+     "conf": "material",
+     "p": "'Veículo de um ou mais eixos que se apoia na sua unidade tratora ou é a ela ligado por meio de articulação.' A definição é de:",
+     "op": [
+      "Reboque",
+      "Caminhão-trator",
+      "Semirreboque",
+      "Caminhão",
+      "CVR"
+     ],
+     "r": 2,
+     "exp": "É a definição de semirreboque: ele se apoia no cavalo (na quinta roda) ou é ligado por articulação.",
+     "oc": [
+      "Falsa. Reboque é o veículo engatado ATRÁS de um automotor; não se apoia na tratora.",
+      "Falsa. Caminhão-trator é quem traciona.",
+      "Correta.",
+      "Falsa. Caminhão é automotor de carga com PBT acima de 3.500 kg.",
+      "Falsa. CVR é uma composição remontada de quatro unidades (art. 29)."
+     ],
+     "ref": "Slides Fiscalização de Veículo de Carga (CPOR 2026), slides 45 a 47.",
+     "rev": "Tema 1 · Aula 2.",
+     "tema": 1
+    },
+    {
+     "id": "p5q10",
+     "tipo": "mc",
+     "dif": 2,
+     "orig": "autoral",
+     "conf": "material",
+     "p": "Sobre AET e AE, assinale a CORRETA.",
+     "op": [
+      "A AET pode ser emitida pelo agente na abordagem, para regularizar o veículo.",
+      "A AE é dada ao veículo de carga ou CVC autorizado pelo CONTRAN a circular até o sucateamento fora dos limites de peso e dimensões.",
+      "A AE só existe para veículos de passageiros.",
+      "AET e AE são emitidas pelo DETRAN do estado de registro do veículo.",
+      "A AET só pode ser concedida para excesso de peso, nunca para carga com dimensão excedente."
+     ],
+     "r": 1,
+     "exp": "Ambas são emitidas única e exclusivamente pelos OEER. A AE é a do veículo autorizado a circular até o sucateamento.",
+     "oc": [
+      "Falsa. O agente não emite AET; só os OEER emitem.",
+      "Correta. É a definição de AE.",
+      "Falsa. A AE vale para ônibus E para veículo ou CVC de carga.",
+      "Falsa. Emitem os OEER (órgãos executivos rodoviários), não o DETRAN.",
+      "Falsa. O art. 11, parágrafo único, permite AET também quando a carga não atende às dimensões."
+     ],
+     "ref": "Slides Fiscalização de Veículo de Carga (CPOR 2026), slides 41, 124 a 126.",
+     "rev": "Tema 1 · Aula 2: AET e AE.",
+     "tema": 1
+    },
+    {
+     "id": "p5q11",
+     "tipo": "vf",
+     "dif": 1,
+     "orig": "autoral",
+     "conf": "material",
+     "p": "Em veículos de carga, a lotação é expressa em quilogramas e inclui o condutor e os passageiros.",
+     "r": true,
+     "exp": "Verdadeiro. Lotação: carga útil máxima, incluindo condutor e passageiros, em kg para os de carga e em número de pessoas para os de passageiros.",
+     "ref": "Slides Fiscalização de Veículo de Carga (CPOR 2026), slide 39.",
+     "rev": "Tema 1 · Aula 2.",
+     "tema": 1
+    },
+    {
+     "id": "p5q12",
+     "tipo": "mc",
+     "dif": 1,
+     "orig": "autoral",
+     "conf": "material",
+     "p": "Sem AET ou AE, a largura máxima de um veículo, com ou sem carga, é:",
+     "op": [
+      "2,50 m",
+      "2,60 m",
+      "2,86 m",
+      "3,00 m",
+      "4,40 m"
+     ],
+     "r": 1,
+     "exp": "Res. 882/21, art. 4º, I: largura máxima de 2,60 m.",
+     "oc": [
+      "Falsa. Não é o limite atual.",
+      "Correta.",
+      "Falsa. 2,86 m é a largura permitida, com AE, aos veículos registrados até 13/11/1996 (art. 13).",
+      "Falsa. Não aparece como limite.",
+      "Falsa. 4,40 m é a altura máxima."
+     ],
+     "ref": "Slides Fiscalização de Veículo de Carga (CPOR 2026), slides 48 e 49.",
+     "rev": "Tema 2 · Aula 3: largura e altura.",
+     "tema": 2
+    },
+    {
+     "id": "p5q13",
+     "tipo": "mc",
+     "dif": 1,
+     "orig": "autoral",
+     "conf": "material",
+     "p": "A altura máxima sem autorização especial é:",
+     "op": [
+      "4,00 m",
+      "4,20 m",
+      "4,40 m",
+      "4,60 m"
+     ],
+     "r": 2,
+     "exp": "Art. 4º, II: altura máxima de 4,40 m. A legislação antiga previa 4,00 m, por isso existem viadutos mais baixos.",
+     "oc": [
+      "Falsa. Era o limite da legislação antiga.",
+      "Falsa. 4,20 m aparece como limite de balanço traseiro (art. 14), não de altura.",
+      "Correta.",
+      "Falsa. Não existe esse limite."
+     ],
+     "ref": "Slides Fiscalização de Veículo de Carga (CPOR 2026), slides 51 e 52.",
+     "rev": "Tema 2 · Aula 3.",
+     "tema": 2
+    },
+    {
+     "id": "p5q14",
+     "tipo": "mc",
+     "dif": 1,
+     "orig": "autoral",
+     "conf": "material",
+     "p": "Comprimento máximo de um veículo articulado de duas unidades, do tipo caminhão-trator e semirreboque:",
+     "op": [
+      "14,00 m",
+      "19,30 m",
+      "19,80 m",
+      "20,00 m",
+      "30,00 m"
+     ],
+     "r": 1,
+     "exp": "Art. 4º, III, e: cavalo + semirreboque, até 19,30 m.",
+     "oc": [
+      "Falsa. É o do veículo não articulado.",
+      "Correta.",
+      "Falsa. 19,80 m é para caminhão ou ônibus + reboque, mais de duas unidades e ônibus articulado.",
+      "Falsa. 20 m é o comprimento da AE dos veículos antigos (art. 13).",
+      "Falsa. 30 m é o teto da AET (art. 19)."
+     ],
+     "ref": "Slides Fiscalização de Veículo de Carga (CPOR 2026), slides 57 a 62.",
+     "rev": "Tema 2 · Aula 3: comprimentos.",
+     "tema": 2
+    },
+    {
+     "id": "p5q15",
+     "tipo": "mc",
+     "dif": 2,
+     "orig": "autoral",
+     "conf": "material",
+     "p": "Um caminhão com reboque (duas unidades) mede 19,70 m e não tem AET. Assinale a CORRETA.",
+     "op": [
+      "Está irregular, porque o máximo de duas unidades é 19,30 m.",
+      "Está regular, porque caminhão ou ônibus + reboque vai até 19,80 m.",
+      "Está irregular, porque qualquer articulado precisa de AET.",
+      "Está regular só durante o dia."
+     ],
+     "r": 1,
+     "exp": "O detalhe é o tipo: caminhão + reboque (19,80 m) é diferente de cavalo + semirreboque (19,30 m).",
+     "oc": [
+      "Falsa. 19,30 m é só para cavalo + semirreboque. A confusão é tratar os dois tipos de duas unidades como iguais.",
+      "Correta. Art. 4º, III, f.",
+      "Falsa. Articulados dentro dos limites do art. 4º não precisam de AET.",
+      "Falsa. Não há restrição de horário para veículo sem AET dentro dos limites."
+     ],
+     "ref": "Slides Fiscalização de Veículo de Carga (CPOR 2026), slide 60.",
+     "rev": "Tema 2 · Aula 3: comprimentos por tipo.",
+     "dica": "Caminhão + reboque e cavalo + semirreboque têm limites diferentes.",
+     "tema": 2
+    },
+    {
+     "id": "p5q16",
+     "tipo": "mc",
+     "dif": 2,
+     "orig": "autoral",
+     "conf": "material",
+     "p": "Caminhão não articulado com 5,00 m de distância entre eixos. O balanço traseiro máximo é:",
+     "op": [
+      "3,50 m",
+      "3,00 m",
+      "2,50 m",
+      "4,20 m",
+      "3,10 m"
+     ],
+     "r": 1,
+     "exp": "60% de 5,00 = 3,00 m. Como 3,00 é menor que o teto de 3,50 m, o limite é 3,00 m.",
+     "oc": [
+      "Falsa. 3,50 m é o teto; só vale quando os 60% passam dele.",
+      "Correta. 0,60 x 5,00 = 3,00 m.",
+      "Falsa. Seria 50%, percentual que não existe para caminhão.",
+      "Falsa. 4,20 m é o limite da AE de veículos antigos (art. 14).",
+      "Falsa. 3,10 m corresponderia a 62% (percentual de ônibus com motor traseiro)."
+     ],
+     "ref": "Slides Fiscalização de Veículo de Carga (CPOR 2026), slides 64 a 66.",
+     "rev": "Tema 2 · Aula 3: balanço traseiro.",
+     "dica": "Calcule 60% da distância entre eixos e compare com 3,50 m.",
+     "tema": 2
+    },
+    {
+     "id": "p5q17",
+     "tipo": "mc",
+     "dif": 3,
+     "orig": "autoral",
+     "conf": "material",
+     "p": "Caminhão não articulado com 6,50 m entre eixos. O balanço traseiro máximo é:",
+     "op": [
+      "3,90 m",
+      "3,50 m",
+      "4,03 m",
+      "4,20 m"
+     ],
+     "r": 1,
+     "exp": "60% de 6,50 = 3,90 m, mas o teto é 3,50 m. Vale o menor: 3,50 m.",
+     "oc": [
+      "Falsa. É só os 60%, esquecendo que o balanço não pode passar de 3,50 m.",
+      "Correta.",
+      "Falsa. Seria 62% (ônibus com motor traseiro).",
+      "Falsa. 4,20 m só com AE para veículos antigos (art. 14)."
+     ],
+     "ref": "Slides Fiscalização de Veículo de Carga (CPOR 2026), slide 64.",
+     "rev": "Tema 2 · Aula 3.",
+     "tema": 2
+    },
+    {
+     "id": "p5q18",
+     "tipo": "vf",
+     "dif": 1,
+     "orig": "autoral",
+     "conf": "material",
+     "p": "Nos reboques e semirreboques, o balanço traseiro máximo é de 3,50 m.",
+     "r": true,
+     "exp": "Verdadeiro. Art. 4º, § 2º, II. Para eles não há percentual da distância entre eixos.",
+     "ref": "Slides Fiscalização de Veículo de Carga (CPOR 2026), slide 67.",
+     "rev": "Tema 2 · Aula 3.",
+     "tema": 2
+    },
+    {
+     "id": "p5q19",
+     "tipo": "mc",
+     "dif": 2,
+     "orig": "autoral",
+     "conf": "material",
+     "p": "Ônibus não articulado com motor dianteiro: o balanço traseiro máximo é de:",
+     "op": [
+      "60% da distância entre eixos",
+      "62% da distância entre eixos",
+      "66% da distância entre eixos",
+      "71% da distância entre eixos"
+     ],
+     "r": 3,
+     "exp": "Passageiros: motor traseiro 62%, central 66%, dianteiro 71%.",
+     "oc": [
+      "Falsa. 60% é do caminhão não articulado.",
+      "Falsa. 62% é do motor traseiro.",
+      "Falsa. 66% é do motor central.",
+      "Correta."
+     ],
+     "ref": "Slides Fiscalização de Veículo de Carga (CPOR 2026), slides 68 a 70.",
+     "rev": "Tema 2 · Aula 3.",
+     "tema": 2
+    },
+    {
+     "id": "p5q20",
+     "tipo": "vf",
+     "dif": 2,
+     "orig": "autoral",
+     "conf": "material",
+     "p": "O comprimento total do veículo é medido sem os acessórios, apenas pela carroçaria.",
+     "r": false,
+     "exp": "Falso. O comprimento vai do ponto mais avançado da frente ao ponto mais avançado da traseira, incluídos todos os acessórios para os quais não haja exceção prevista.",
+     "ref": "Slides Fiscalização de Veículo de Carga (CPOR 2026), slide 63.",
+     "rev": "Tema 2 · Aula 3.",
+     "fix": "O comprimento total inclui todos os acessórios para os quais não esteja prevista exceção.",
+     "tema": 2
+    },
+    {
+     "id": "p5q21",
+     "tipo": "mc",
+     "dif": 1,
+     "orig": "autoral",
+     "conf": "material",
+     "p": "Pelo art. 6º da Res. 882/21, o limite legal do eixo simples de rodagem dupla é:",
+     "op": [
+      "6 t",
+      "10 t",
+      "17 t",
+      "25,5 t"
+     ],
+     "r": 1,
+     "exp": "Eixo simples direcional 6 t; simples de rodagem dupla 10 t; tandem duplo 17 t; tandem triplo 25,5 t.",
+     "oc": [
+      "Falsa. 6 t é o direcional.",
+      "Correta.",
+      "Falsa. 17 t é o conjunto de dois eixos em tandem.",
+      "Falsa. 25,5 t é o tandem triplo."
+     ],
+     "ref": "Slides Fiscalização de Veículo de Carga (CPOR 2026), slide 83.",
+     "rev": "Tema 3 · Aula 4.",
+     "tema": 3
+    },
+    {
+     "id": "p5q22",
+     "tipo": "mc",
+     "dif": 1,
+     "orig": "autoral",
+     "conf": "material",
+     "p": "Qual o limite legal de um conjunto de três eixos em tandem?",
+     "op": [
+      "17 t",
+      "20 t",
+      "25,5 t",
+      "30 t"
+     ],
+     "r": 2,
+     "exp": "Tandem triplo: 25,5 t.",
+     "oc": [
+      "Falsa. É o tandem duplo.",
+      "Falsa. Seria somar dois eixos de 10 t; o tandem tem limite próprio.",
+      "Correta.",
+      "Falsa. Seria 3 x 10 t; o tandem não soma eixos isolados."
+     ],
+     "ref": "Slides Fiscalização de Veículo de Carga (CPOR 2026), slide 83.",
+     "rev": "Tema 3 · Aula 4.",
+     "tema": 3
+    },
+    {
+     "id": "p5q23",
+     "tipo": "mc",
+     "dif": 1,
+     "orig": "autoral",
+     "conf": "material",
+     "p": "Truck: eixo direcional na frente e dois eixos em tandem atrás. Qual o PBT legal?",
+     "op": [
+      "16 t",
+      "21 t",
+      "23 t",
+      "26 t"
+     ],
+     "r": 2,
+     "exp": "6 + 17 = 23 t.",
+     "oc": [
+      "Falsa. 16 t é o toco (6 + 10).",
+      "Falsa. 21 t é o caso de dois eixos traseiros NÃO tandem (6 + 15), como mostram os slides.",
+      "Correta.",
+      "Falsa. Seria 6 + 10 + 10, contando o tandem como dois eixos isolados."
+     ],
+     "ref": "Slides Fiscalização de Veículo de Carga (CPOR 2026), slides 84 a 86.",
+     "rev": "Tema 3 · Aula 4.",
+     "dica": "Direcional 6 t + tandem duplo.",
+     "tema": 3
+    },
+    {
+     "id": "p5q24",
+     "tipo": "mc",
+     "dif": 2,
+     "orig": "autoral",
+     "conf": "material",
+     "p": "Carreta LS: cavalo com eixo direcional e tandem duplo, puxando semirreboque com tandem triplo. PBTC legal:",
+     "op": [
+      "33 t",
+      "45 t",
+      "48,5 t",
+      "50 t",
+      "57 t"
+     ],
+     "r": 2,
+     "exp": "6 + 17 + 25,5 = 48,5 t.",
+     "oc": [
+      "Falsa. 33 t é a carreta simples (6 + 10 + 17).",
+      "Falsa. 45 t é o limite quando o cavalo + semirreboque tem menos de 16 m.",
+      "Correta.",
+      "Falsa. 50 t é a carreta canguru.",
+      "Falsa. 57 t é o bitrem."
+     ],
+     "ref": "Slides Fiscalização de Veículo de Carga (CPOR 2026), slides 89 e 114.",
+     "rev": "Tema 3 · Aula 4: composições.",
+     "tema": 3
+    },
+    {
+     "id": "p5q25",
+     "tipo": "mc",
+     "dif": 2,
+     "orig": "autoral",
+     "conf": "material",
+     "p": "Qual composição circula com até 57 t SEM precisar de AET?",
+     "op": [
+      "Rodotrem",
+      "Bitrem",
+      "Tritrem",
+      "Bitrenzão",
+      "Treminhão"
+     ],
+     "r": 1,
+     "exp": "O bitrem (6 + 17 + 17 + 17 = 57 t) fica no limite do art. 18 e não precisa de AET.",
+     "oc": [
+      "Falsa. Rodotrem: 74 t, com AET.",
+      "Correta.",
+      "Falsa. Tritrem: 74 t, com AET.",
+      "Falsa. Bitrenzão: 74 t, com AET.",
+      "Falsa. Treminhão: 63 t, com AET."
+     ],
+     "ref": "Slides Fiscalização de Veículo de Carga (CPOR 2026), slides 117 a 123.",
+     "rev": "Tema 3 · Aula 4.",
+     "tema": 3
+    },
+    {
+     "id": "p5q26",
+     "tipo": "mc",
+     "dif": 1,
+     "orig": "autoral",
+     "conf": "material",
+     "p": "O PBTC da composição conhecida como Romeu e Julieta (6 + 10 + 10 + 10) é:",
+     "op": [
+      "33 t",
+      "36 t",
+      "40 t",
+      "53 t"
+     ],
+     "r": 1,
+     "exp": "6 + 10 + 10 + 10 = 36 t.",
+     "oc": [
+      "Falsa. É a carreta (6 + 10 + 17).",
+      "Correta.",
+      "Falsa. Erro de soma.",
+      "Falsa. É a vanderléia."
+     ],
+     "ref": "Slides Fiscalização de Veículo de Carga (CPOR 2026), slide 122.",
+     "rev": "Tema 3 · Aula 4.",
+     "tema": 3
+    },
+    {
+     "id": "p5q27",
+     "tipo": "vf",
+     "dif": 1,
+     "orig": "autoral",
+     "conf": "material",
+     "p": "Eixos em tandem são dois ou mais eixos que formam um conjunto integral de suspensão, com distribuição de peso entre eles, podendo qualquer deles ser ou não motriz.",
+     "r": true,
+     "exp": "Verdadeiro. É o art. 9º da Res. 882/21.",
+     "ref": "Slides Fiscalização de Veículo de Carga (CPOR 2026), slide 76.",
+     "rev": "Tema 3 · Aula 4.",
+     "tema": 3
+    },
+    {
+     "id": "p5q28",
+     "tipo": "mc",
+     "dif": 3,
+     "orig": "autoral",
+     "conf": "material",
+     "p": "Num conjunto de dois eixos, a distância entre os planos verticais que contêm os centros das rodas é de 2,60 m. Como esses eixos são considerados?",
+     "op": [
+      "Como tandem de 17 t, porque estão no mesmo conjunto.",
+      "Cada eixo é considerado distanciado.",
+      "Como tandem triplo.",
+      "A distância não importa para o limite de peso."
+     ],
+     "r": 1,
+     "exp": "Acima de 2,40 m, cada eixo é considerado como se fosse distanciado (art. 6º, § 1º).",
+     "oc": [
+      "Falsa. Estar no mesmo conjunto não basta: acima de 2,40 m deixa de ser tandem para efeito de peso.",
+      "Correta.",
+      "Falsa. São dois eixos, não três.",
+      "Falsa. A distância muda o limite aplicado."
+     ],
+     "ref": "Slides Fiscalização de Veículo de Carga (CPOR 2026), slide 92.",
+     "rev": "Tema 3 · Aula 4.",
+     "dica": "Compare 2,60 m com 2,40 m.",
+     "tema": 3
+    },
+    {
+     "id": "p5q29",
+     "tipo": "mc",
+     "dif": 2,
+     "orig": "autoral",
+     "conf": "material",
+     "p": "Das composições abaixo, qual precisa de AET?",
+     "op": [
+      "Carreta (33 t)",
+      "Canguru (50 t)",
+      "Vanderléia (53 t)",
+      "Bitrem (57 t)",
+      "Rodotrem (74 t)"
+     ],
+     "r": 4,
+     "exp": "O rodotrem tem mais de duas unidades e PBTC acima de 57 t, então exige AET (art. 18).",
+     "oc": [
+      "Não precisa: 33 t.",
+      "Não precisa: 50 t.",
+      "Não precisa: 53 t.",
+      "Não precisa: o bitrem está no limite de 57 t, não acima.",
+      "Precisa: 74 t é acima de 57 t."
+     ],
+     "ref": "Slides Fiscalização de Veículo de Carga (CPOR 2026), slides 113 a 119 e 132.",
+     "rev": "Tema 3 · Aula 4 e aula 5.",
+     "tema": 3
+    },
+    {
+     "id": "p5q30",
+     "tipo": "mc",
+     "dif": 3,
+     "orig": "autoral",
+     "conf": "material",
+     "p": "Semirreboque com tandem triplo mais um eixo distanciado, puxado por cavalo 6 + 17. Qual o PBTC legal (com comprimento regular)?",
+     "op": [
+      "48,5 t",
+      "53 t",
+      "57 t",
+      "58,5 t"
+     ],
+     "r": 3,
+     "exp": "6 + 17 + 10 + 25,5 = 58,5 t.",
+     "oc": [
+      "Falsa. É o limite se o quarto eixo for irregular (desconsiderado).",
+      "Falsa. É a vanderléia.",
+      "Falsa. É o bitrem.",
+      "Correta."
+     ],
+     "ref": "Slides Fiscalização de Veículo de Carga (CPOR 2026), slides 93 e 146.",
+     "rev": "Tema 3 · Aulas 4 e 5.",
+     "tema": 3
+    },
+    {
+     "id": "p5q31",
+     "tipo": "mc",
+     "dif": 2,
+     "orig": "autoral",
+     "conf": "material",
+     "p": "Pelo art. 18 da Res. 882/21, a CVC com mais de duas unidades (contando a tratora) só pode circular portando AET quando:",
+     "op": [
+      "Tiver PBTC acima de 45 t.",
+      "Tiver PBTC acima de 57 t ou comprimento acima de 19,80 m.",
+      "Tiver comprimento acima de 19,30 m, em qualquer caso.",
+      "Transitar à noite.",
+      "Tiver PBTC acima de 74 t."
+     ],
+     "r": 1,
+     "exp": "Basta uma das condições: PBTC acima de 57 t OU comprimento acima de 19,80 m. O porte da AET é obrigatório.",
+     "oc": [
+      "Falsa. 45 t é o limite da combinação curta.",
+      "Correta.",
+      "Falsa. 19,30 m é limite do cavalo + semirreboque (duas unidades), não deste artigo.",
+      "Falsa. O horário é regra do art. 20, para quem já exige AET.",
+      "Falsa. 74 t é o TETO da AET (art. 19), não o gatilho."
+     ],
+     "ref": "Slides Fiscalização de Veículo de Carga (CPOR 2026), slide 132.",
+     "rev": "Tema 4 · Aula 5: art. 18.",
+     "tema": 4
+    },
+    {
+     "id": "p5q32",
+     "tipo": "mc",
+     "dif": 3,
+     "orig": "autoral",
+     "conf": "material",
+     "p": "CVC com PBTC de 70 t pede AET. Qual comprimento ela precisa ter para atender ao art. 19?",
+     "op": [
+      "Entre 19,81 m e 30 m",
+      "Entre 25 m e 30 m",
+      "No máximo 19,80 m",
+      "Entre 19,30 m e 25 m"
+     ],
+     "r": 1,
+     "exp": "PBTC acima de 57 t: comprimento mínimo de 25 m e máximo de 30 m.",
+     "oc": [
+      "Falsa. Essa faixa é para PBTC de até 57 t.",
+      "Correta.",
+      "Falsa. Até 19,80 m não é a regra do art. 19 para essa CVC (há a exceção do art. 17 para unidades antigas).",
+      "Falsa. Faixa inexistente."
+     ],
+     "ref": "Slides Fiscalização de Veículo de Carga (CPOR 2026), slides 133 e 134.",
+     "rev": "Tema 4 · Aula 5: art. 19.",
+     "dica": "70 t é acima ou abaixo de 57 t?",
+     "tema": 4
+    },
+    {
+     "id": "p5q33",
+     "tipo": "mc",
+     "dif": 2,
+     "orig": "autoral",
+     "conf": "material",
+     "p": "CVC com AET por comprimento, PBTC de 55 t. Qual faixa de comprimento o art. 19 admite?",
+     "op": [
+      "Acima de 19,80 m e até 30 m",
+      "Entre 25 m e 30 m",
+      "Até 19,30 m",
+      "Acima de 30 m"
+     ],
+     "r": 0,
+     "exp": "Até 57 t: comprimento acima de 19,80 m e no máximo 30 m.",
+     "oc": [
+      "Correta.",
+      "Falsa. Essa é a faixa para mais de 57 t.",
+      "Falsa. Até 19,30 m nem exigiria AET por comprimento.",
+      "Falsa. 30 m é o teto."
+     ],
+     "ref": "Slides Fiscalização de Veículo de Carga (CPOR 2026), slides 133 e 134.",
+     "rev": "Tema 4 · Aula 5.",
+     "tema": 4
+    },
+    {
+     "id": "p5q34",
+     "tipo": "mc",
+     "dif": 2,
+     "orig": "autoral",
+     "conf": "material",
+     "p": "A CVC que exige AET, em regra, pode transitar:",
+     "op": [
+      "24 horas, a até 90 km/h.",
+      "Do amanhecer ao pôr do sol, a até 80 km/h, respeitado limite inferior da sinalização.",
+      "Só à noite, para não atrapalhar o trânsito.",
+      "Do amanhecer ao pôr do sol, a até 60 km/h."
+     ],
+     "r": 1,
+     "exp": "Art. 20 da Res. 882/21.",
+     "oc": [
+      "Falsa. Diuturno só nas hipóteses dos §§ 1º e 2º, e o limite é 80 km/h.",
+      "Correta.",
+      "Falsa. É o contrário: a regra é o trânsito diurno.",
+      "Falsa. O limite é 80 km/h."
+     ],
+     "ref": "Slides Fiscalização de Veículo de Carga (CPOR 2026), slide 135.",
+     "rev": "Tema 4 · Aula 5: art. 20.",
+     "tema": 4
+    },
+    {
+     "id": "p5q35",
+     "tipo": "vf",
+     "dif": 2,
+     "orig": "autoral",
+     "conf": "material",
+     "p": "Em vias de pista dupla e duplo sentido, com separadores físicos e duas ou mais faixas no mesmo sentido, é autorizado o trânsito diuturno da CVC que exige AET.",
+     "r": true,
+     "exp": "Verdadeiro. Art. 20, § 1º.",
+     "ref": "Slides Fiscalização de Veículo de Carga (CPOR 2026), slide 135.",
+     "rev": "Tema 4 · Aula 5.",
+     "tema": 4
+    },
+    {
+     "id": "p5q36",
+     "tipo": "mc",
+     "dif": 2,
+     "orig": "autoral",
+     "conf": "material",
+     "p": "Cavalo + semirreboque com comprimento total de 15,5 m. Qual o PBTC máximo?",
+     "op": [
+      "45 t",
+      "48,5 t",
+      "57 t",
+      "58,5 t"
+     ],
+     "r": 0,
+     "exp": "Com menos de 16 m, o PBTC cai para 45 t (relação peso x dimensão).",
+     "oc": [
+      "Correta.",
+      "Falsa. 48,5 t exige 16 m ou mais.",
+      "Falsa. 57 t é o bitrem.",
+      "Falsa. 58,5 t exige semirreboque de 4 eixos e 17,5 m ou mais."
+     ],
+     "ref": "Slides Fiscalização de Veículo de Carga (CPOR 2026), slides 143 e 147.",
+     "rev": "Tema 4 · Aula 5: peso x comprimento.",
+     "tema": 4
+    },
+    {
+     "id": "p5q37",
+     "tipo": "mc",
+     "dif": 3,
+     "orig": "autoral",
+     "conf": "material",
+     "p": "Semirreboque com o quarto eixo instalado de forma irregular. Para a fiscalização:",
+     "op": [
+      "Vale 58,5 t, porque o eixo existe fisicamente.",
+      "O quarto eixo é desconsiderado e o PBTC cai para 48,5 t.",
+      "Vale 57 t.",
+      "O veículo fica proibido de circular, sem limite de peso aplicável."
+     ],
+     "r": 1,
+     "exp": "O eixo irregular é desconsiderado e o limite volta a 48,5 t (o da carreta LS).",
+     "oc": [
+      "Falsa. Eixo irregular não conta.",
+      "Correta.",
+      "Falsa. 57 t é do bitrem.",
+      "Falsa. O slide manda aplicar 48,5 t."
+     ],
+     "ref": "Slides Fiscalização de Veículo de Carga (CPOR 2026), slide 147.",
+     "rev": "Tema 4 · Aula 5.",
+     "tema": 4
+    },
+    {
+     "id": "p5q38",
+     "tipo": "vf",
+     "dif": 2,
+     "orig": "autoral",
+     "conf": "material",
+     "p": "Nas CVC com PBTC de até 58,5 t, o caminhão-trator precisa ser traçado (tração dupla).",
+     "r": false,
+     "exp": "Falso. Art. 19, § 2º, nos slides: até 58,5 t o cavalo pode ser de tração simples (4x2 ou 6x2), sem precisar de cavalo traçado nem de AET.",
+     "ref": "Slides Fiscalização de Veículo de Carga (CPOR 2026), slide 148.",
+     "rev": "Tema 4 · Aula 5.",
+     "fix": "Nas CVC com PBTC até 58,5 t, o caminhão-trator pode ser de tração simples (4x2 ou 6x2).",
+     "tema": 4
+    },
+    {
+     "id": "p5q39",
+     "tipo": "mc",
+     "dif": 3,
+     "orig": "autoral",
+     "conf": "material",
+     "p": "Pelo art. 17 da Res. 882/21, excepcionalmente será concedida AET para CVC com PBTC de até 74 t e comprimento inferior a 25 m, desde que:",
+     "op": [
+      "O caminhão-trator seja fabricado depois de 2006.",
+      "As unidades tracionadas tenham sido registradas até 03/02/2006.",
+      "A CVC circule só à noite.",
+      "O comprimento seja inferior a 19,30 m."
+     ],
+     "r": 1,
+     "exp": "A exceção vale para as unidades TRACIONADAS registradas até 03/02/2006, respeitadas as restrições dos OEER. Até 19,80 m, o trânsito é diuturno (§ 3º).",
+     "oc": [
+      "Falsa. A data é das unidades tracionadas, não do cavalo.",
+      "Correta.",
+      "Falsa. Não há essa regra.",
+      "Falsa. O § 3º fala em até 19,80 m, e para dar trânsito diuturno, não como requisito."
+     ],
+     "ref": "Slides Fiscalização de Veículo de Carga (CPOR 2026), slides 155 e 156.",
+     "rev": "Tema 4 · Aula 5: exceções.",
+     "tema": 4
+    },
+    {
+     "id": "p5q40",
+     "tipo": "mc",
+     "dif": 3,
+     "orig": "autoral",
+     "conf": "material",
+     "p": "Veículo registrado e licenciado até 13/11/1996, com dimensões acima do art. 4º. Pelo art. 13, ele pode circular com AE:",
+     "op": [
+      "Até 20 m de comprimento, 2,86 m de largura e 4,40 m de altura, AE definitiva, 24 horas, até o sucateamento.",
+      "Até 19,80 m, 2,60 m e 4,40 m, com AE anual.",
+      "Até 30 m e 74 t, só durante o dia.",
+      "Até 20 m, 3,00 m e 4,60 m, renovando a AE a cada ano."
+     ],
+     "r": 0,
+     "exp": "Art. 13: até 20 m, 2,86 m e 4,40 m; AE definitiva, 24 h, validade até o sucateamento.",
+     "oc": [
+      "Correta.",
+      "Falsa. Esses são os limites gerais, e a AE do art. 13 é definitiva.",
+      "Falsa. Isso mistura regras da AET (art. 19).",
+      "Falsa. Medidas e prazo errados (a AE anual é a do art. 14)."
+     ],
+     "ref": "Slides Fiscalização de Veículo de Carga (CPOR 2026), slide 151.",
+     "rev": "Tema 4 · Aula 5.",
+     "tema": 4
+    },
+    {
+     "id": "p5q41",
+     "tipo": "mc",
+     "dif": 3,
+     "orig": "autoral",
+     "conf": "material",
+     "p": "Semirreboque registrado até 13/11/1996, com balanço traseiro de 4,0 m (respeitados os 60%). Puxado por um cavalo de 2015. Assinale a CORRETA.",
+     "op": [
+      "Não pode receber AE, porque o cavalo é posterior a 1996.",
+      "Pode receber AE com validade máxima de 1 ano, renovável até o sucateamento.",
+      "Recebe AE definitiva, até o sucateamento.",
+      "Não precisa de AE, porque 4,0 m está dentro do limite."
+     ],
+     "r": 1,
+     "exp": "Art. 14: balanço de 3,5 m a 4,2 m, veículos até 13/11/1996: AE de no máximo 1 ano, renovável. Nos combinados, vale mesmo se o cavalo for registrado depois (parágrafo único).",
+     "oc": [
+      "Falsa. O parágrafo único permite mesmo com cavalo mais novo.",
+      "Correta.",
+      "Falsa. Definitiva é a do art. 13 (dimensões); a do balanço é anual.",
+      "Falsa. O limite comum é 3,50 m; 4,0 m passa dele."
+     ],
+     "ref": "Slides Fiscalização de Veículo de Carga (CPOR 2026), slides 152 e 153.",
+     "rev": "Tema 4 · Aula 5.",
+     "tema": 4
+    },
+    {
+     "id": "p5q42",
+     "tipo": "vf",
+     "dif": 2,
+     "orig": "autoral",
+     "conf": "material",
+     "p": "A Res. 916/22 proíbe a inclusão de eixo auxiliar veicular em semirreboque com comprimento igual ou inferior a 10,50 m, dotado ou não de quinta roda.",
+     "r": true,
+     "exp": "Verdadeiro. Art. 10, VI, citado nos slides.",
+     "ref": "Slides Fiscalização de Veículo de Carga (CPOR 2026), slide 157.",
+     "rev": "Tema 4 · Aula 5.",
+     "tema": 4
+    },
+    {
+     "id": "p5q43",
+     "tipo": "mc",
+     "dif": 1,
+     "orig": "autoral",
+     "conf": "material",
+     "p": "Para a fiscalização de peso, o limite regulamentar é:",
+     "op": [
+      "Sempre o limite legal da Res. 882/21.",
+      "Sempre o limite técnico do fabricante.",
+      "O menor valor entre o limite legal e o limite técnico.",
+      "O maior valor entre o legal e o técnico.",
+      "A média entre o legal e o técnico."
+     ],
+     "r": 2,
+     "exp": "Limite regulamentar = o menor entre o legal e o técnico; com AET ou AE, o menor entre o autorizado e o técnico. 'Sempre o menor.'",
+     "oc": [
+      "Falsa. Se o fabricante permitir menos, vale o fabricante (CTB, art. 100).",
+      "Falsa. Se a lei permitir menos, vale a lei (CTB, art. 99).",
+      "Correta.",
+      "Falsa. É o contrário.",
+      "Falsa. Não existe média."
+     ],
+     "ref": "Slides Fiscalização de Veículo de Carga (CPOR 2026), slides 202 a 205.",
+     "rev": "Tema 5 · Aula 6.",
+     "tema": 5
+    },
+    {
+     "id": "p5q44",
+     "tipo": "mc",
+     "dif": 3,
+     "orig": "autoral",
+     "conf": "material",
+     "p": "Toco: limite legal de 6 t (dianteiro) + 10 t (traseiro). Limite técnico: 5 t (dianteiro) + 10,5 t (traseiro). Qual o limite regulamentar?",
+     "op": [
+      "16 t",
+      "15,5 t",
+      "15 t",
+      "16,5 t"
+     ],
+     "r": 2,
+     "exp": "Compare eixo a eixo: dianteiro, menor entre 6 e 5 = 5; traseiro, menor entre 10 e 10,5 = 10. Regulamentar = 15 t.",
+     "oc": [
+      "Falsa. É só o legal.",
+      "Falsa. É o técnico somado; o erro é comparar os totais (16 x 15,5) em vez de cada eixo.",
+      "Correta. É o exemplo do slide 208.",
+      "Falsa. Seria somar os maiores valores."
+     ],
+     "ref": "Slides Fiscalização de Veículo de Carga (CPOR 2026), slides 206 a 210.",
+     "rev": "Tema 5 · Aula 6: regulamentar eixo a eixo.",
+     "dica": "Não compare os totais: compare cada eixo.",
+     "tema": 5
+    },
+    {
+     "id": "p5q45",
+     "tipo": "mc",
+     "dif": 2,
+     "orig": "autoral",
+     "conf": "material",
+     "p": "A inscrição do peso por eixo prevista no Anexo VI da Res. 882/21 é obrigatória:",
+     "op": [
+      "Para todos os veículos de carga em circulação.",
+      "Apenas para veículos fabricados a partir de 1º de julho de 2022.",
+      "Apenas para veículos registrados até 31/12/2008.",
+      "Apenas para reboques e semirreboques."
+     ],
+     "r": 1,
+     "exp": "Art. 63, alterado pela Res. 899/22.",
+     "oc": [
+      "Falsa. A regra não alcança a frota antiga.",
+      "Correta.",
+      "Falsa. 2008 é a data da pintura alternativa (art. 47).",
+      "Falsa. Vale para os veículos do Anexo VI fabricados a partir da data."
+     ],
+     "ref": "Slides Fiscalização de Veículo de Carga (CPOR 2026), slide 193.",
+     "rev": "Tema 5 · Aula 6.",
+     "tema": 5
+    },
+    {
+     "id": "p5q46",
+     "tipo": "mc",
+     "dif": 2,
+     "orig": "autoral",
+     "conf": "material",
+     "p": "Veículo registrado até 31/12/2008, sem a inscrição de tara e lotação no padrão da resolução. O art. 47 autoriza:",
+     "op": [
+      "Inscrição por pintura resistente, amarela sobre fundo preto, caracteres de no mínimo 30 mm, em local visível na parte externa.",
+      "Dispensa de qualquer inscrição.",
+      "Inscrição a caneta no CRLV.",
+      "Inscrição por pintura branca sobre fundo vermelho."
+     ],
+     "r": 0,
+     "exp": "É a exceção para veículos até 2008. A regra geral é plaqueta metálica ou etiqueta adesiva resistente ao tempo.",
+     "oc": [
+      "Correta.",
+      "Falsa. Há exceção na forma, não dispensa.",
+      "Falsa. Não existe.",
+      "Falsa. A cor é amarela sobre fundo preto."
+     ],
+     "ref": "Slides Fiscalização de Veículo de Carga (CPOR 2026), slides 172 a 174.",
+     "rev": "Tema 5 · Aula 6.",
+     "tema": 5
+    },
+    {
+     "id": "p5q47",
+     "tipo": "mc",
+     "dif": 2,
+     "orig": "autoral",
+     "conf": "material",
+     "p": "Caminhão-trator circulando sem as inscrições técnicas. O enquadramento é:",
+     "op": [
+      "Art. 230, XXI (675-00), sem medida administrativa.",
+      "Art. 237 (696-30), com retenção.",
+      "Art. 231, V (683-11).",
+      "Art. 232, com retenção até apresentar o documento."
+     ],
+     "r": 1,
+     "exp": "Cavalo ou veículo de transporte de passageiros sem inscrições: art. 237, código 696-30, com retenção.",
+     "oc": [
+      "Falsa. O 230, XXI é para caminhão, reboque ou semirreboque.",
+      "Correta.",
+      "Falsa. 683-11 é excesso de peso.",
+      "Falsa. O 232 é documento de porte obrigatório."
+     ],
+     "ref": "Slides Fiscalização de Veículo de Carga (CPOR 2026), slide 196.",
+     "rev": "Tema 5 · Aula 6: autuação sem inscrições.",
+     "dica": "Cavalo e ônibus ficam num artigo; caminhão e semirreboque, em outro.",
+     "tema": 5
+    },
+    {
+     "id": "p5q48",
+     "tipo": "mc",
+     "dif": 2,
+     "orig": "autoral",
+     "conf": "material",
+     "p": "Semirreboque sem as inscrições técnicas. Enquadramento e medida:",
+     "op": [
+      "Art. 237 (696-30), com retenção.",
+      "Art. 230, XXI (675-00), sem medida administrativa.",
+      "Art. 231, X, com transbordo.",
+      "Art. 235, com retenção."
+     ],
+     "r": 1,
+     "exp": "Caminhão, reboque ou semirreboque sem inscrições: art. 230, XXI, código 675-00, sem medida administrativa.",
+     "oc": [
+      "Falsa. O 237 com retenção é para cavalo ou ônibus (ou dados incorretos).",
+      "Correta.",
+      "Falsa. 231, X é excesso de CMT.",
+      "Falsa. 235 é carga além dos limites do veículo."
+     ],
+     "ref": "Slides Fiscalização de Veículo de Carga (CPOR 2026), slide 196.",
+     "rev": "Tema 5 · Aula 6.",
+     "tema": 5
+    },
+    {
+     "id": "p5q49",
+     "tipo": "vf",
+     "dif": 2,
+     "orig": "autoral",
+     "conf": "material",
+     "p": "Nos casos de incorreção dos dados técnicos ou dos locais de fixação da plaqueta ou do adesivo, aplica-se o art. 237 do CTB, independentemente do tipo de veículo.",
+     "r": true,
+     "exp": "Verdadeiro. A divisão 237 / 230, XXI vale para a FALTA de inscrições. Dados errados ou fora do local vão para o 237 em qualquer veículo.",
+     "ref": "Slides Fiscalização de Veículo de Carga (CPOR 2026), slide 197.",
+     "rev": "Tema 5 · Aula 6.",
+     "tema": 5
+    },
+    {
+     "id": "p5q50",
+     "tipo": "mc",
+     "dif": 2,
+     "orig": "autoral",
+     "conf": "material",
+     "p": "Há divergência entre as inscrições técnicas do veículo e os dados da AET. Para a fiscalização:",
+     "op": [
+      "Prevalece a AET, por ser documento do OEER.",
+      "Prevalecem as inscrições técnicas.",
+      "Vale o maior valor.",
+      "O agente não pode fiscalizar o peso."
+     ],
+     "r": 1,
+     "exp": "Art. 45 da Res. 882/21.",
+     "oc": [
+      "Falsa. A AET não se sobrepõe ao que o fabricante inscreveu.",
+      "Correta.",
+      "Falsa. A lógica é a do menor e, aqui, a regra expressa do art. 45.",
+      "Falsa. A fiscalização continua, usando as inscrições."
+     ],
+     "ref": "Slides Fiscalização de Veículo de Carga (CPOR 2026), slide 191.",
+     "rev": "Tema 5 · Aula 6.",
+     "tema": 5
+    },
+    {
+     "id": "p5q51",
+     "tipo": "mc",
+     "dif": 1,
+     "orig": "autoral",
+     "conf": "material",
+     "p": "Nos reboques e semirreboques, a indicação dos pesos e capacidades deve ficar:",
+     "op": [
+      "No painel de instrumentos.",
+      "Na parte externa da carroçaria, na lateral dianteira.",
+      "Embaixo do assento.",
+      "Só no CRLV."
+     ],
+     "r": 1,
+     "exp": "Reboques e semirreboques: parte externa da carroçaria, na lateral dianteira.",
+     "oc": [
+      "Falsa. Reboque não tem painel; esse é um dos locais dos automotores.",
+      "Correta.",
+      "Falsa. Local possível só nos automotores.",
+      "Falsa. A inscrição é física, no veículo (CTB, art. 117)."
+     ],
+     "ref": "Slides Fiscalização de Veículo de Carga (CPOR 2026), slides 181 a 184.",
+     "rev": "Tema 5 · Aula 6.",
+     "tema": 5
+    },
+    {
+     "id": "p5q52",
+     "tipo": "vf",
+     "dif": 1,
+     "orig": "autoral",
+     "conf": "material",
+     "p": "A instalação de implementos que modifiquem a tara do veículo (eixo, tanque suplementar, guindaste etc.) deve ser acompanhada de nova inscrição com a nova tara.",
+     "r": true,
+     "exp": "Verdadeiro. § 2º, citado nos slides.",
+     "ref": "Slides Fiscalização de Veículo de Carga (CPOR 2026), slide 190.",
+     "rev": "Tema 5 · Aula 6.",
+     "tema": 5
+    },
+    {
+     "id": "p5q53",
+     "tipo": "mc",
+     "dif": 1,
+     "orig": "autoral",
+     "conf": "material",
+     "p": "Na fiscalização por equipamento de pesagem, as tolerâncias são:",
+     "op": [
+      "5% no PBT/PBTC e 12,5% no peso por eixo.",
+      "12,5% no PBT/PBTC e 5% no eixo.",
+      "7,5% em todos os casos.",
+      "10% no PBT e 10% no eixo.",
+      "Nenhuma."
+     ],
+     "r": 0,
+     "exp": "Lei 7.408/85 (alterada pela Lei 14.229/21) e Res. 882, art. 50.",
+     "oc": [
+      "Correta.",
+      "Falsa. Os percentuais estão trocados.",
+      "Falsa. 7,5% é só para biodiesel B100.",
+      "Falsa. Esses percentuais não existem na regra.",
+      "Falsa. Sem tolerância é no documento fiscal e na CMT."
+     ],
+     "ref": "Slides Excesso de Peso e CMT (CPOR 2026), slides 12 e 13.",
+     "rev": "Tema 6 · Aula 7.",
+     "tema": 6
+    },
+    {
+     "id": "p5q54",
+     "tipo": "mc",
+     "dif": 1,
+     "orig": "autoral",
+     "conf": "material",
+     "p": "Na fiscalização pelo peso declarado em documento fiscal:",
+     "op": [
+      "Aplica-se a tolerância de 5%.",
+      "Só pode ser feita em posto fiscal.",
+      "Pode ser feita a qualquer tempo ou local, sem qualquer tolerância.",
+      "Aplica-se 12,5% por eixo."
+     ],
+     "r": 2,
+     "exp": "Res. 882, art. 49, § 3º.",
+     "oc": [
+      "Falsa. A tolerância é da balança.",
+      "Falsa. Qualquer tempo ou local.",
+      "Correta.",
+      "Falsa. Documento não mede eixo e não tem tolerância."
+     ],
+     "ref": "Slides Excesso de Peso e CMT (CPOR 2026), slide 29.",
+     "rev": "Tema 6 · Aula 7.",
+     "tema": 6
+    },
+    {
+     "id": "p5q55",
+     "tipo": "vf",
+     "dif": 1,
+     "orig": "autoral",
+     "conf": "material",
+     "p": "A fiscalização em equipamento de pesagem aferido e certificado pelo INMETRO prevalece sobre a verificação do peso lançado no documento fiscal.",
+     "r": true,
+     "exp": "Verdadeiro. Res. 882, art. 49, § 2º.",
+     "ref": "Slides Excesso de Peso e CMT (CPOR 2026), slide 4.",
+     "rev": "Tema 6 · Aula 7.",
+     "tema": 6
+    },
+    {
+     "id": "p5q56",
+     "tipo": "mc",
+     "dif": 3,
+     "orig": "autoral",
+     "conf": "analise",
+     "p": "Carreta com PBTC regulamentar de 48,5 t, na balança: total de 50.000 kg e um tandem com 19,5 t. Assinale a CORRETA.",
+     "op": [
+      "Autua 683-12, porque o tandem passou de 17 t + 12,5%.",
+      "Não autua: o total está dentro dos 5% e, até 50 t, o eixo não é fiscalizado.",
+      "Autua 683-11, porque 50.000 é maior que 48.500.",
+      "Autua 683-13."
+     ],
+     "r": 1,
+     "exp": "48.500 x 1,05 = 50.925 kg; 50.000 está dentro. Como o PBTC regulamentar é de até 50 t, só se fiscaliza o total (art. 50, § 1º).",
+     "oc": [
+      "Falsa. 17 x 1,125 = 19,125 t, e o tandem de fato passou, mas o eixo de veículo de até 50 t só é fiscalizado se o total passar da tolerância (§ 2º).",
+      "Correta.",
+      "Falsa. Esqueceu a tolerância de 5% da balança.",
+      "Falsa. Não há excesso no total nem fiscalização do eixo."
+     ],
+     "ref": "Slides Excesso de Peso e CMT (CPOR 2026), slides 14 e 15.",
+     "rev": "Tema 6 · Aula 7: regra dos 50 t.",
+     "dica": "Primeiro veja se o total passou da tolerância.",
+     "tema": 6
+    },
+    {
+     "id": "p5q57",
+     "tipo": "mc",
+     "dif": 1,
+     "orig": "autoral",
+     "conf": "material",
+     "p": "Na fiscalização do excesso da capacidade máxima de tração (CMT), a tolerância é de:",
+     "op": [
+      "5%",
+      "7,5%",
+      "12,5%",
+      "Não há tolerância"
+     ],
+     "r": 3,
+     "exp": "Não há previsão legal de tolerância na CMT.",
+     "oc": [
+      "Falsa. 5% é do PBT/PBTC na balança.",
+      "Falsa. 7,5% é do biodiesel.",
+      "Falsa. 12,5% é do eixo.",
+      "Correta."
+     ],
+     "ref": "Slides Excesso de Peso e CMT (CPOR 2026), slide 16.",
+     "rev": "Tema 6 · Aula 7.",
+     "tema": 6
+    },
+    {
+     "id": "p5q58",
+     "tipo": "mc",
+     "dif": 2,
+     "orig": "autoral",
+     "conf": "material",
+     "p": "Veículo não adaptado transportando biodiesel B100. Na balança ou pela nota fiscal, a tolerância no PBT/PBTC é de:",
+     "op": [
+      "5%",
+      "7,5%",
+      "10%",
+      "12,5%"
+     ],
+     "r": 1,
+     "exp": "Lei 7.408, art. 1º, § 3º, e Res. 882, art. 62: 7,5%, até o sucateamento.",
+     "oc": [
+      "Falsa. É a regra geral da balança.",
+      "Correta. E vale também na nota fiscal, o que é exceção.",
+      "Falsa. Percentual inexistente.",
+      "Falsa. 12,5% é do eixo."
+     ],
+     "ref": "Slides Excesso de Peso e CMT (CPOR 2026), slides 44 e 45.",
+     "rev": "Tema 6 · Aula 7: tolerâncias excepcionais.",
+     "tema": 6
+    },
+    {
+     "id": "p5q59",
+     "tipo": "mc",
+     "dif": 3,
+     "orig": "autoral",
+     "conf": "material",
+     "p": "Tanque de carga líquida, semirreboque licenciado em 2005, com excesso de até 5% no PBTC. Assinale a CORRETA.",
+     "op": [
+      "Não há exceção: o excesso é autuado normalmente.",
+      "O OEER concede AE de porte obrigatório, válida até o sucateamento; com ela, os 5% são admitidos inclusive na nota fiscal.",
+      "A AE só pode ser pedida junto com o cavalo.",
+      "Vale a data de licenciamento do cavalo."
+     ],
+     "r": 1,
+     "exp": "Res. 882, art. 16: tanques de 2000 a 2007. Na CVC vale a data das unidades rebocadas, e a AE pode ser pedida para o implemento com ou sem cavalo.",
+     "oc": [
+      "Falsa. Existe a exceção do art. 16.",
+      "Correta.",
+      "Falsa. Pode ser pedida com ou sem unidade tratora.",
+      "Falsa. Vale a data das unidades rebocadas; o cavalo pode ser mais novo."
+     ],
+     "ref": "Slides Excesso de Peso e CMT (CPOR 2026), slides 40 a 42.",
+     "rev": "Tema 6 · Aula 7.",
+     "tema": 6
+    },
+    {
+     "id": "p5q60",
+     "tipo": "mc",
+     "dif": 2,
+     "orig": "autoral",
+     "conf": "material",
+     "p": "O documento fiscal apresentado não traz o peso da carga. Segundo a Res. 882, art. 49, § 5º:",
+     "op": [
+      "O agente estima o peso pela aparência da carga.",
+      "O veículo pode ser encaminhado para aferição em equipamento de pesagem, ou pode ser apresentado documento substituto com a informação.",
+      "O veículo é liberado, porque não há como fiscalizar.",
+      "Autua-se automaticamente por excesso de peso."
+     ],
+     "r": 1,
+     "exp": "A ausência do peso pode levar à balança ou à apresentação de documento substituto. O § 4º exige o peso em kg.",
+     "oc": [
+      "Falsa. Estimativa não é modalidade de fiscalização.",
+      "Correta.",
+      "Falsa. Há solução prevista.",
+      "Falsa. Não há presunção de excesso."
+     ],
+     "ref": "Slides Excesso de Peso e CMT (CPOR 2026), slide 35.",
+     "rev": "Tema 6 · Aula 7.",
+     "tema": 6
+    },
+    {
+     "id": "p5q61",
+     "tipo": "vf",
+     "dif": 2,
+     "orig": "autoral",
+     "conf": "material",
+     "p": "Na fiscalização por documento, soma-se o peso da carga declarado no documento de transporte ao peso da tara, sem tolerância.",
+     "r": true,
+     "exp": "Verdadeiro. É o que mostra o slide 38 do EP.",
+     "ref": "Slides Excesso de Peso e CMT (CPOR 2026), slide 38.",
+     "rev": "Tema 6 · Aula 7.",
+     "tema": 6
+    },
+    {
+     "id": "p5q62",
+     "tipo": "mc",
+     "dif": 2,
+     "orig": "autoral",
+     "conf": "material",
+     "p": "Truck com PBT regulamentar de 23.000 kg pesado na balança: 26.000 kg. Qual o excesso a considerar?",
+     "op": [
+      "3.000 kg",
+      "1.850 kg",
+      "1.150 kg",
+      "2.875 kg"
+     ],
+     "r": 1,
+     "exp": "Limite com tolerância: 23.000 + 5% = 24.150 kg. Excesso: 26.000 − 24.150 = 1.850 kg.",
+     "oc": [
+      "Falsa. Esqueceu a tolerância de 5%.",
+      "Correta. É o exemplo do slide 27.",
+      "Falsa. 1.150 kg é o valor da própria tolerância.",
+      "Falsa. 2.875 kg é 12,5% de 23.000, ou seja, a tolerância de EIXO, e não o excesso."
+     ],
+     "ref": "Slides Excesso de Peso e CMT (CPOR 2026), slide 27.",
+     "rev": "Tema 6 · Aula 7: cálculo do excesso.",
+     "dica": "Some 5% ao PBT antes de subtrair.",
+     "tema": 6
+    },
+    {
+     "id": "p5q63",
+     "tipo": "mc",
+     "dif": 2,
+     "orig": "autoral",
+     "conf": "material",
+     "p": "Carga de um único remetente, com peso declarado na nota inferior ao aferido na balança. Pela Res. 547/15, quem responde pelo excesso?",
+     "op": [
+      "O transportador",
+      "O embarcador",
+      "O condutor",
+      "Embarcador e transportador, solidariamente"
+     ],
+     "r": 1,
+     "exp": "Único remetente que declarou peso menor que o aferido: embarcador (CTB 257, § 4º; Res. 547/15, art. 6º).",
+     "oc": [
+      "Falsa. O transportador responde sem nota, sem peso declarado ou com vários remetentes.",
+      "Correta.",
+      "Falsa. O condutor responde pelos atos na direção.",
+      "Falsa. Solidariedade só quando o declarado já supera o limite legal."
+     ],
+     "ref": "Slides Excesso de Peso e CMT (CPOR 2026), slides 50, 53 e 54.",
+     "rev": "Tema 7 · Aula 8.",
+     "tema": 7
+    },
+    {
+     "id": "p5q64",
+     "tipo": "mc",
+     "dif": 1,
+     "orig": "autoral",
+     "conf": "material",
+     "p": "Carga de vários remetentes, com excesso no PBTC. Quem responde?",
+     "op": [
+      "O embarcador que mandou mais peso",
+      "Todos os embarcadores",
+      "O transportador",
+      "O condutor"
+     ],
+     "r": 2,
+     "exp": "Vários remetentes: transportador, seja qual for o peso declarado.",
+     "oc": [
+      "Falsa. Nenhum remetente controla o total.",
+      "Falsa. A tabela não divide entre embarcadores.",
+      "Correta.",
+      "Falsa."
+     ],
+     "ref": "Slides Excesso de Peso e CMT (CPOR 2026), slides 50 e 54.",
+     "rev": "Tema 7 · Aula 8.",
+     "tema": 7
+    },
+    {
+     "id": "p5q65",
+     "tipo": "mc",
+     "dif": 2,
+     "orig": "autoral",
+     "conf": "material",
+     "p": "Único remetente declara na nota um peso que já é superior ao limite legal. Quem responde pelo excesso no PBT?",
+     "op": [
+      "Só o embarcador",
+      "Só o transportador",
+      "Embarcador e transportador, solidariamente",
+      "Ninguém, porque a nota está correta"
+     ],
+     "r": 2,
+     "exp": "CTB, art. 257, § 6º, e Res. 547/15: responsabilidade solidária.",
+     "oc": [
+      "Falsa. O transportador também aceitou levar acima do limite.",
+      "Falsa. O embarcador declarou peso acima do legal.",
+      "Correta.",
+      "Falsa. Nota correta não afasta o excesso."
+     ],
+     "ref": "Slides Excesso de Peso e CMT (CPOR 2026), slides 53 e 54.",
+     "rev": "Tema 7 · Aula 8.",
+     "tema": 7
+    },
+    {
+     "id": "p5q66",
+     "tipo": "mc",
+     "dif": 2,
+     "orig": "autoral",
+     "conf": "material",
+     "p": "Mercadoria transportada sem documento fiscal, com excesso por eixo (683-12). Quem é o infrator?",
+     "op": [
+      "Embarcador",
+      "Transportador",
+      "Os dois",
+      "O proprietário da mercadoria"
+     ],
+     "r": 1,
+     "exp": "Mercadoria sem documento fiscal: transportador, nas três situações (683-11, 683-12 e 683-13).",
+     "oc": [
+      "Falsa. Sem nota não há declaração do embarcador para responsabilizá-lo.",
+      "Correta.",
+      "Falsa.",
+      "Falsa. Não aparece na tabela."
+     ],
+     "ref": "Slides Excesso de Peso e CMT (CPOR 2026), slide 54.",
+     "rev": "Tema 7 · Aula 8.",
+     "tema": 7
+    },
+    {
+     "id": "p5q67",
+     "tipo": "vf",
+     "dif": 1,
+     "orig": "autoral",
+     "conf": "material",
+     "p": "Para os §§ 4º e 6º do art. 257 do CTB, considera-se embarcador o remetente ou expedidor da carga, mesmo se o frete for a pagar.",
+     "r": true,
+     "exp": "Verdadeiro. Res. 882, art. 56.",
+     "ref": "Slides Excesso de Peso e CMT (CPOR 2026), slide 51.",
+     "rev": "Tema 7 · Aula 8.",
+     "tema": 7
+    },
+    {
+     "id": "p5q68",
+     "tipo": "mc",
+     "dif": 1,
+     "orig": "autoral",
+     "conf": "material",
+     "p": "Qual código corresponde a transitar com excesso de peso POR EIXO?",
+     "op": [
+      "683-11",
+      "683-12",
+      "683-13",
+      "688-20"
+     ],
+     "r": 1,
+     "exp": "683-11 PBT/PBTC; 683-12 por eixo; 683-13 PBT/PBTC e por eixo.",
+     "oc": [
+      "Falsa. É o total.",
+      "Correta.",
+      "Falsa. É o total e o eixo juntos.",
+      "Falsa. É excesso de CMT até 600 kg."
+     ],
+     "ref": "Slides Excesso de Peso e CMT (CPOR 2026), slide 47.",
+     "rev": "Tema 8 · Aula 9.",
+     "tema": 8
+    },
+    {
+     "id": "p5q69",
+     "tipo": "mc",
+     "dif": 2,
+     "orig": "autoral",
+     "conf": "material",
+     "p": "Excesso de peso apurado de 570 kg. Qual o valor da multa?",
+     "op": [
+      "R$ 135,48",
+      "R$ 146,12",
+      "R$ 140,80",
+      "R$ 162,08"
+     ],
+     "r": 1,
+     "exp": "570 ÷ 200 = 2,85, arredonda para 3 blocos; FM até 600 kg = 5,32; 3 x 5,32 = 15,96; + 130,16 = R$ 146,12.",
+     "oc": [
+      "Falsa. É 1 bloco (excesso de até 200 kg).",
+      "Correta. Exemplo do slide 92.",
+      "Falsa. São 2 blocos: arredondou para baixo.",
+      "Falsa. Usou FM 10,64, que é da faixa de 601 a 800 kg."
+     ],
+     "ref": "Slides Excesso de Peso e CMT (CPOR 2026), slides 62 e 92.",
+     "rev": "Tema 8 · Aula 9: fórmula.",
+     "dica": "Blocos de 200 kg, sempre arredondando para cima.",
+     "tema": 8
+    },
+    {
+     "id": "p5q70",
+     "tipo": "mc",
+     "dif": 2,
+     "orig": "autoral",
+     "conf": "material",
+     "p": "Excesso de peso de 1.100 kg. Valor da multa:",
+     "op": [
+      "R$ 321,68",
+      "R$ 289,76",
+      "R$ 257,84",
+      "R$ 449,36"
+     ],
+     "r": 0,
+     "exp": "1.100 ÷ 200 = 5,5, arredonda para 6; FM 1.001–3.000 = 31,92; 6 x 31,92 = 191,52; + 130,16 = R$ 321,68.",
+     "oc": [
+      "Correta. Exemplo do slide 93.",
+      "Falsa. São 5 blocos: arredondou para baixo.",
+      "Falsa. Usou FM 21,28 (faixa de 801 a 1.000).",
+      "Falsa. São 10 blocos: é o valor para 2.000 kg."
+     ],
+     "ref": "Slides Excesso de Peso e CMT (CPOR 2026), slides 62 e 93.",
+     "rev": "Tema 8 · Aula 9.",
+     "tema": 8
+    },
+    {
+     "id": "p5q71",
+     "tipo": "mc",
+     "dif": 3,
+     "orig": "autoral",
+     "conf": "material",
+     "p": "Excessos de 4.999 kg e de 5.002 kg. Assinale a alternativa com os dois valores de multa, nessa ordem.",
+     "op": [
+      "R$ 1.194,16 e R$ 1.513,36",
+      "R$ 1.194,16 e R$ 1.236,72",
+      "R$ 1.460,16 e R$ 1.513,36",
+      "R$ 1.513,36 e R$ 1.513,36"
+     ],
+     "r": 0,
+     "exp": "4.999: 25 blocos x 42,56 + 130,16 = 1.194,16. 5.002: 26 blocos x 53,20 + 130,16 = 1.513,36. A faixa do excesso total muda o FM de todos os blocos.",
+     "oc": [
+      "Correta. Exemplos dos slides 94 e 95.",
+      "Falsa. O segundo valor usou FM 42,56; acima de 5.000 kg o FM é 53,20.",
+      "Falsa. O primeiro usou FM 53,20 para 4.999 kg, que ainda está na faixa de 3.001 a 5.000.",
+      "Falsa. Os dois estão em faixas diferentes."
+     ],
+     "ref": "Slides Excesso de Peso e CMT (CPOR 2026), slides 94 e 95.",
+     "rev": "Tema 8 · Aula 9: a faixa define o FM.",
+     "tema": 8
+    },
+    {
+     "id": "p5q72",
+     "tipo": "mc",
+     "dif": 3,
+     "orig": "autoral",
+     "conf": "analise",
+     "p": "Caminhão de PBT 23.000 kg, aferido na balança com 31.038 kg. Qual o excesso e a multa?",
+     "op": [
+      "8.038 kg e R$ 2.311,36",
+      "6.888 kg e R$ 1.992,16",
+      "6.888 kg e R$ 1.938,96",
+      "6.888 kg e R$ 1.619,76"
+     ],
+     "r": 1,
+     "exp": "Limite com tolerância: 24.150 kg. Excesso: 6.888 kg. 6.888 ÷ 200 = 34,44, arredonda para 35; 35 x 53,20 = 1.862,00; + 130,16 = R$ 1.992,16 (tabela: 6.801 a 7.000 kg = R$ 1.992,16).",
+     "oc": [
+      "Falsa. Esqueceu a tolerância (31.038 − 23.000).",
+      "Correta.",
+      "Falsa. Usou 34 blocos, arredondando para baixo.",
+      "Falsa. Usou FM 42,56, mas o excesso passa de 5.000 kg."
+     ],
+     "ref": "Slides Excesso de Peso e CMT (CPOR 2026), slides 57, 58 e 63.",
+     "rev": "Tema 8 · Aula 9: AIT e multa.",
+     "tema": 8
+    },
+    {
+     "id": "p5q73",
+     "tipo": "mc",
+     "dif": 2,
+     "orig": "autoral",
+     "conf": "material",
+     "p": "No AIT de excesso de peso aferido em balança, segundo os slides, o campo 'valor considerado':",
+     "op": [
+      "É o limite regulamentado com a tolerância.",
+      "É sempre igual à medição realizada.",
+      "É o excesso apurado.",
+      "É deixado em branco."
+     ],
+     "r": 1,
+     "exp": "No exemplo: medição realizada 31.038 kg; limite regulamentado 24.150 kg; valor considerado 31.038 kg. 'Medição realizada é sempre igual ao valor considerado.'",
+     "oc": [
+      "Falsa. Isso vai no campo 'limite regulamentado'.",
+      "Correta.",
+      "Falsa. O excesso vai nas observações.",
+      "Falsa. O preenchimento é obrigatório (Portaria SENATRAN 354/22)."
+     ],
+     "ref": "Slides Excesso de Peso e CMT (CPOR 2026), slides 58 e 60.",
+     "rev": "Tema 8 · Aula 9.",
+     "tema": 8
+    },
+    {
+     "id": "p5q74",
+     "tipo": "mc",
+     "dif": 2,
+     "orig": "autoral",
+     "conf": "material",
+     "p": "O preenchimento dos campos de equipamento e medição do AIT é obrigatório para infrações verificadas por:",
+     "op": [
+      "Apenas abordagem visual.",
+      "Equipamentos de fiscalização ou nota fiscal.",
+      "Apenas radar de velocidade.",
+      "Apenas balança fixa."
+     ],
+     "r": 1,
+     "exp": "Portaria SENATRAN 354/2022, citada no slide 60.",
+     "oc": [
+      "Falsa.",
+      "Correta.",
+      "Falsa. Vale para equipamentos em geral e para a nota fiscal.",
+      "Falsa. Vale para qualquer equipamento e para a nota fiscal."
+     ],
+     "ref": "Slides Excesso de Peso e CMT (CPOR 2026), slide 60.",
+     "rev": "Tema 8 · Aula 9.",
+     "tema": 8
+    },
+    {
+     "id": "p5q75",
+     "tipo": "vf",
+     "dif": 2,
+     "orig": "autoral",
+     "conf": "material",
+     "p": "Quando o peso verificado estiver acima do PBT ou PBTC acrescido da tolerância de 5%, a multa é aplicada sobre todo o peso acima do PBT, e não só sobre a parcela que excede a tolerância.",
+     "r": false,
+     "exp": "Falso. Res. 882, art. 53: a multa incide somente sobre a parcela que exceder a tolerância.",
+     "ref": "Slides Excesso de Peso e CMT (CPOR 2026), slide 48.",
+     "rev": "Tema 8 · Aula 9.",
+     "fix": "A multa incide somente sobre a parcela que exceder a tolerância de 5%.",
+     "tema": 8
+    },
+    {
+     "id": "p5q76",
+     "tipo": "mc",
+     "dif": 1,
+     "orig": "autoral",
+     "conf": "material",
+     "p": "Excesso de peso de apenas 20 kg. A multa é:",
+     "op": [
+      "Zero, porque é menos de 200 kg.",
+      "R$ 135,48",
+      "R$ 130,16",
+      "R$ 5,32"
+     ],
+     "r": 1,
+     "exp": "Bloco começado conta inteiro: 1 x 5,32 + 130,16 = R$ 135,48.",
+     "oc": [
+      "Falsa. 'Ou fração': qualquer fração já é um bloco.",
+      "Correta. Exemplo do slide 91.",
+      "Falsa. Faltou somar o bloco de 5,32.",
+      "Falsa. Faltou a parcela fixa de 130,16."
+     ],
+     "ref": "Slides Excesso de Peso e CMT (CPOR 2026), slide 91.",
+     "rev": "Tema 8 · Aula 9.",
+     "tema": 8
+    },
+    {
+     "id": "p5q77",
+     "tipo": "mc",
+     "dif": 1,
+     "orig": "autoral",
+     "conf": "material",
+     "p": "Excesso de CMT de 450 kg. Código e natureza:",
+     "op": [
+      "688-20, média",
+      "689-00, grave",
+      "690-40, gravíssima",
+      "683-11, média"
+     ],
+     "r": 0,
+     "exp": "Até 600 kg: média, código 688-20 (R$ 130,16 nos slides).",
+     "oc": [
+      "Correta.",
+      "Falsa. Grave é de 601 a 1.000 kg.",
+      "Falsa. Gravíssima é acima de 1.000 kg.",
+      "Falsa. 683-11 é excesso de peso."
+     ],
+     "ref": "Slides Excesso de Peso e CMT (CPOR 2026), slides 72, 74 e 97.",
+     "rev": "Tema 9 · Aula 10.",
+     "tema": 9
+    },
+    {
+     "id": "p5q78",
+     "tipo": "mc",
+     "dif": 1,
+     "orig": "autoral",
+     "conf": "material",
+     "p": "Excesso de CMT de 900 kg:",
+     "op": [
+      "Média, R$ 130,16",
+      "Grave, R$ 195,23",
+      "Gravíssima, R$ 293,47",
+      "Gravíssima, R$ 586,94"
+     ],
+     "r": 1,
+     "exp": "601 a 1.000 kg: grave (689-00), R$ 195,23.",
+     "oc": [
+      "Falsa. Média é até 600 kg.",
+      "Correta. Exemplo do slide 98.",
+      "Falsa. Acima de 1.000 kg.",
+      "Falsa. Seriam 2 blocos de gravíssima, que só se aplicam acima de 1.000 kg."
+     ],
+     "ref": "Slides Excesso de Peso e CMT (CPOR 2026), slides 74 e 98.",
+     "rev": "Tema 9 · Aula 10.",
+     "tema": 9
+    },
+    {
+     "id": "p5q79",
+     "tipo": "mc",
+     "dif": 2,
+     "orig": "autoral",
+     "conf": "material",
+     "p": "Excesso de CMT de 4.000 kg. Valor da multa:",
+     "op": [
+      "R$ 293,47",
+      "R$ 1.173,88",
+      "R$ 2.347,76",
+      "R$ 2.790,16"
+     ],
+     "r": 2,
+     "exp": "Acima de 1.000 kg: gravíssima a cada 500 kg ou fração. 4.000 ÷ 500 = 8; 8 x 293,47 = R$ 2.347,76.",
+     "oc": [
+      "Falsa. É um só bloco.",
+      "Falsa. Seriam 4 blocos (dividiu por 1.000).",
+      "Correta. Exemplo do slide 75.",
+      "Falsa. Esse é o valor de 10.000 kg de excesso de PESO (outra fórmula)."
+     ],
+     "ref": "Slides Excesso de Peso e CMT (CPOR 2026), slide 75.",
+     "rev": "Tema 9 · Aula 10.",
+     "tema": 9
+    },
+    {
+     "id": "p5q80",
+     "tipo": "mc",
+     "dif": 3,
+     "orig": "autoral",
+     "conf": "analise",
+     "p": "Excesso de CMT de 1.200 kg. Valor da multa:",
+     "op": [
+      "R$ 586,94",
+      "R$ 880,41",
+      "R$ 195,23",
+      "R$ 704,33"
+     ],
+     "r": 1,
+     "exp": "Gravíssima a cada 500 kg ou fração: 1.200 ÷ 500 = 2,4, arredonda para 3; 3 x 293,47 = R$ 880,41. (Cálculo pela regra do art. 58; os slides não trazem este número.)",
+     "oc": [
+      "Falsa. São 2 blocos: ignorou a fração.",
+      "Correta.",
+      "Falsa. Grave vai só até 1.000 kg.",
+      "Falsa. Multiplicou por 2,4 sem arredondar a fração para 3 blocos."
+     ],
+     "ref": "Slides Excesso de Peso e CMT (CPOR 2026), slide 74 (Res. 882, art. 58).",
+     "rev": "Tema 9 · Aula 10.",
+     "tema": 9
+    },
+    {
+     "id": "p5q81",
+     "tipo": "mc",
+     "dif": 2,
+     "orig": "autoral",
+     "conf": "material",
+     "p": "Pelo art. 231, X do CTB (excesso de CMT), as medidas administrativas são:",
+     "op": [
+      "Remoção do veículo",
+      "Retenção do veículo e transbordo da carga excedente",
+      "Recolhimento do CRLV",
+      "Apenas multa, sem medida"
+     ],
+     "r": 1,
+     "exp": "Art. 231, X: multa; retenção do veículo e transbordo da carga excedente.",
+     "oc": [
+      "Falsa. A remoção só acontece se o transbordo não for possível (CTB, art. 275, parágrafo único).",
+      "Correta.",
+      "Falsa. Não está prevista.",
+      "Falsa. Há medida administrativa."
+     ],
+     "ref": "Slides Excesso de Peso e CMT (CPOR 2026), slide 73.",
+     "rev": "Tema 9 · Aula 10.",
+     "tema": 9
+    },
+    {
+     "id": "p5q82",
+     "tipo": "mc",
+     "dif": 1,
+     "orig": "autoral",
+     "conf": "material",
+     "p": "Pelo art. 275 do CTB, o transbordo da carga com peso excedente:",
+     "op": [
+      "É opcional, a critério do condutor.",
+      "É condição para prosseguir viagem, às expensas do proprietário, sem prejuízo da multa.",
+      "Substitui a multa.",
+      "É feito às expensas do órgão de trânsito."
+     ],
+     "r": 1,
+     "exp": "Transbordo é condição para seguir viagem; o custo é do proprietário e a multa continua.",
+     "oc": [
+      "Falsa. É condição, não opção.",
+      "Correta.",
+      "Falsa. 'Sem prejuízo da multa.'",
+      "Falsa. É do proprietário."
+     ],
+     "ref": "Slides Excesso de Peso e CMT (CPOR 2026), slide 79.",
+     "rev": "Tema 10 · Aula 11.",
+     "tema": 10
+    },
+    {
+     "id": "p5q83",
+     "tipo": "mc",
+     "dif": 1,
+     "orig": "autoral",
+     "conf": "material",
+     "p": "Não sendo possível fazer o transbordo de imediato:",
+     "op": [
+      "O veículo é liberado com advertência.",
+      "O veículo é recolhido ao depósito e só liberado após sanar a irregularidade e pagar remoção e estada.",
+      "O condutor assina termo de compromisso e segue.",
+      "O agente apreende a CNH."
+     ],
+     "r": 1,
+     "exp": "CTB, art. 275, parágrafo único.",
+     "oc": [
+      "Falsa.",
+      "Correta.",
+      "Falsa. Não existe essa saída.",
+      "Falsa. Não está prevista."
+     ],
+     "ref": "Slides Excesso de Peso e CMT (CPOR 2026), slides 79 e 87.",
+     "rev": "Tema 10 · Aula 11.",
+     "tema": 10
+    },
+    {
+     "id": "p5q84",
+     "tipo": "mc",
+     "dif": 2,
+     "orig": "autoral",
+     "conf": "material",
+     "p": "A critério do agente, avaliados os riscos e as condições de segurança, pode ser dispensado o remanejamento ou transbordo de:",
+     "op": [
+      "Qualquer carga de alto valor.",
+      "Produtos perigosos, perecíveis e cargas vivas.",
+      "Cargas de órgãos públicos.",
+      "Cargas com nota fiscal."
+     ],
+     "r": 1,
+     "exp": "Res. 882, art. 54 (slide 86).",
+     "oc": [
+      "Falsa. Valor não é critério.",
+      "Correta.",
+      "Falsa. Não aparece na regra.",
+      "Falsa. Ter nota não dispensa."
+     ],
+     "ref": "Slides Excesso de Peso e CMT (CPOR 2026), slide 86.",
+     "rev": "Tema 10 · Aula 11.",
+     "tema": 10
+    },
+    {
+     "id": "p5q85",
+     "tipo": "mc",
+     "dif": 2,
+     "orig": "autoral",
+     "conf": "material",
+     "p": "Excesso no PBT aferido em balança. O que deve ser transbordado?",
+     "op": [
+      "Todo o peso acima do PBT, sem tolerância.",
+      "Apenas o que exceder a tolerância de 5%.",
+      "Toda a carga.",
+      "Nada: só se autua."
+     ],
+     "r": 1,
+     "exp": "Autua o que excede os 5% e transborda o que excede os 5%.",
+     "oc": [
+      "Falsa. A tolerância também vale para o transbordo.",
+      "Correta.",
+      "Falsa. Só o excedente.",
+      "Falsa. O transbordo é medida obrigatória."
+     ],
+     "ref": "Slides Excesso de Peso e CMT (CPOR 2026), slides 81 e 83.",
+     "rev": "Tema 10 · Aula 11.",
+     "tema": 10
+    },
+    {
+     "id": "p5q86",
+     "tipo": "vf",
+     "dif": 3,
+     "orig": "autoral",
+     "conf": "material",
+     "p": "Para veículos com PBT ou PBTC regulamentar de até 50 t, não se aplica a exigência de remanejar a carga para eliminar excesso por eixo.",
+     "r": true,
+     "exp": "Verdadeiro. O art. 54 manda remanejar ou transbordar até eliminar os excessos por eixo, mas o § 2º (slide 82) diz que isso não se aplica aos veículos do art. 50, § 1º (até 50 t), que só são fiscalizados pelo total.",
+     "ref": "Slides Excesso de Peso e CMT (CPOR 2026), slide 82.",
+     "rev": "Tema 10 · Aula 11.",
+     "tema": 10
+    },
+    {
+     "id": "p5q87",
+     "tipo": "mc",
+     "dif": 3,
+     "orig": "autoral",
+     "conf": "material",
+     "p": "CVC com PBTC acima de 50 t, total dentro da tolerância, mas com um eixo acima dos 12,5%. Qual a conduta sobre a carga?",
+     "op": [
+      "Transbordar imediatamente todo o excesso.",
+      "Primeiro remanejar a carga; transbordar o que passa dos 12,5% só se o remanejamento não resolver.",
+      "Liberar, porque o total está dentro.",
+      "Recolher direto ao depósito."
+     ],
+     "r": 1,
+     "exp": "Slide 83: no eixo (acima de 50 t), autua o que excede 12,5% e transborda o que excede 12,5%, 'desde que o remanejamento da carga não resolva'.",
+     "oc": [
+      "Falsa. O remanejamento vem antes.",
+      "Correta.",
+      "Falsa. Acima de 50 t, o eixo é fiscalizado sempre.",
+      "Falsa. Depósito só se não der para sanar."
+     ],
+     "ref": "Slides Excesso de Peso e CMT (CPOR 2026), slides 82 e 83.",
+     "rev": "Tema 10 · Aula 11.",
+     "tema": 10
+    },
+    {
+     "id": "p5q88",
+     "tipo": "mc",
+     "dif": 3,
+     "orig": "autoral",
+     "conf": "analise",
+     "p": "Caminhão toco (6 t + 10 t, PBT de 16 t), DESCARREGADO (tara de 7 t), passa por placa R-14 de 15 t. Pela ficha 574-63 do MBFT:",
+     "op": [
+      "Não autua, porque o peso real (7 t) está abaixo da placa.",
+      "Autua no art. 187, I (574-63), porque o PBT do caminhão está em desacordo com a sinalização.",
+      "Autua no art. 231, V (683-11).",
+      "Autua no art. 235."
+     ],
+     "r": 1,
+     "exp": "A ficha manda autuar o caminhão que transita 'com PBT em desacordo' com a R-14 ou R-17. O PBT é a capacidade do veículo (16 t), não o peso do momento. Conclusão apurada a partir da ficha mostrada nos slides 140 e 141; o slide da pergunta não traz a resposta escrita.",
+     "oc": [
+      "Falsa pela ficha: ela fala em PBT do veículo, não em peso aferido.",
+      "Correta pela ficha 574-63.",
+      "Falsa. O 231, V é para excesso de peso de fato, que não existe aqui.",
+      "Falsa. O 235 é carga além dos limites do veículo."
+     ],
+     "ref": "Slides Fiscalização de Veículo de Carga (CPOR 2026), slides 140 e 141.",
+     "rev": "Tema 10 · Aula 12: placa R-14 e art. 187.",
+     "tema": 10
+    },
+    {
+     "id": "p5q89",
+     "tipo": "mc",
+     "dif": 2,
+     "orig": "autoral",
+     "conf": "material",
+     "p": "Caminhão com excesso de peso de fato, desrespeitando a placa R-14. Pela ficha 574-63, autua-se:",
+     "op": [
+      "No art. 187, I (574-63).",
+      "No art. 231, V (683-11, 683-12 ou 683-13, conforme o caso).",
+      "Nos dois, cumulativamente.",
+      "No art. 237."
+     ],
+     "r": 1,
+     "exp": "A ficha 574-63 diz para NÃO autuar no 187 nesse caso, e sim nas infrações do art. 231, V.",
+     "oc": [
+      "Falsa. É o 'quando não autuar' da ficha.",
+      "Correta.",
+      "Falsa. A ficha afasta o 187.",
+      "Falsa."
+     ],
+     "ref": "Slides Fiscalização de Veículo de Carga (CPOR 2026), slide 141.",
+     "rev": "Tema 10 · Aula 12.",
+     "tema": 10
+    },
+    {
+     "id": "p5q90",
+     "tipo": "mc",
+     "dif": 2,
+     "orig": "autoral",
+     "conf": "material",
+     "p": "A carga ultrapassa a lateral do veículo, embora o conjunto continue dentro dos limites regulamentares de dimensão. Pelo art. 60 da Res. 882, aplica-se:",
+     "op": [
+      "Art. 231, VI",
+      "Art. 232",
+      "Art. 235",
+      "Nenhuma infração, porque o conjunto está dentro dos limites"
+     ],
+     "r": 2,
+     "exp": "Art. 60, XI: art. 235, quando a carga ultrapassar os limites laterais, posterior ou anterior do veículo, ainda que não ultrapasse os limites regulamentares.",
+     "oc": [
+      "Falsa. O 231, VI é dimensão acima do limite em desacordo com a AET, ou AET vencida.",
+      "Falsa. O 232 é não portar a AET.",
+      "Correta.",
+      "Falsa. O 'ainda que' do inciso XI responde a isso."
+     ],
+     "ref": "Slides Fiscalização de Veículo de Carga (CPOR 2026), slide 11.",
+     "rev": "Tema 10 · Aula 12.",
+     "tema": 10
+    },
+    {
+     "id": "p5q91",
+     "tipo": "mc",
+     "dif": 3,
+     "orig": "autoral",
+     "conf": "analise",
+     "p": "Veículo com dimensões acima do limite, com AET regularmente expedida, mas que o condutor deixou em casa. Pelo art. 60 da Res. 882:",
+     "op": [
+      "Art. 231, IV (sem autorização especial)",
+      "Art. 232 (sem portar AET ou AE regularmente expedida)",
+      "Art. 231, VI (AET vencida)",
+      "Art. 237"
+     ],
+     "r": 1,
+     "exp": "O inciso X do art. 60 fala em dimensões acima do limite 'sem portar AET ou AE regularmente expedida': art. 232. Se não existisse AET nenhuma, seria o inciso IV (art. 231, IV). Distinção apurada pela leitura dos incisos.",
+     "oc": [
+      "Falsa aqui: a AET existe. O 231, IV é para quem não tem a autorização.",
+      "Correta.",
+      "Falsa. Não está vencida; está fora do veículo.",
+      "Falsa."
+     ],
+     "ref": "Slides Fiscalização de Veículo de Carga (CPOR 2026), slides 10 e 11.",
+     "rev": "Tema 10 · Aula 12: sem AET x sem portar.",
+     "dica": "A AET existe ou não existe?",
+     "tema": 10
+    },
+    {
+     "id": "p5q92",
+     "tipo": "mc",
+     "dif": 2,
+     "orig": "autoral",
+     "conf": "material",
+     "p": "Veículo com dimensões acima do limite circulando com a AET vencida:",
+     "op": [
+      "Art. 231, VI",
+      "Art. 232",
+      "Art. 187, I",
+      "Art. 239"
+     ],
+     "r": 0,
+     "exp": "Art. 60, VII: AET ou AE vencida, com dimensões acima do limite: art. 231, VI.",
+     "oc": [
+      "Correta.",
+      "Falsa. O 232 é deixar de portar uma AET válida.",
+      "Falsa. O 187, I é restrição de local ou horário.",
+      "Falsa. O 239 é retirar veículo retido."
+     ],
+     "ref": "Slides Fiscalização de Veículo de Carga (CPOR 2026), slide 10.",
+     "rev": "Tema 10 · Aula 12.",
+     "tema": 10
+    },
+    {
+     "id": "p5q93",
+     "tipo": "mc",
+     "dif": 1,
+     "orig": "autoral",
+     "conf": "material",
+     "p": "Retirar do local, sem permissão, o veículo legalmente retido para regularização:",
+     "op": [
+      "Art. 237",
+      "Art. 239",
+      "Art. 231, X",
+      "Art. 230, XXI"
+     ],
+     "r": 1,
+     "exp": "Art. 60, XV: art. 239.",
+     "oc": [
+      "Falsa.",
+      "Correta.",
+      "Falsa. É excesso de CMT.",
+      "Falsa. É falta de inscrições em caminhão ou semirreboque."
+     ],
+     "ref": "Slides Fiscalização de Veículo de Carga (CPOR 2026), slide 11.",
+     "rev": "Tema 10 · Aula 12.",
+     "tema": 10
+    },
+    {
+     "id": "p5q94",
+     "tipo": "mc",
+     "dif": 2,
+     "orig": "autoral",
+     "conf": "material",
+     "p": "CVC com dimensões acima do limite, com AET, mas sem a sinalização especial de advertência na traseira:",
+     "op": [
+      "Art. 237",
+      "Art. 235",
+      "Art. 232",
+      "Art. 231, IV"
+     ],
+     "r": 0,
+     "exp": "Art. 60, XIV: art. 237. O art. 24 exige a sinalização especial de advertência na traseira, visível e sem outras informações.",
+     "oc": [
+      "Correta.",
+      "Falsa. O 235 é carga além dos limites do veículo.",
+      "Falsa. O 232 é não portar AET.",
+      "Falsa. O 231, IV é transitar sem autorização."
+     ],
+     "ref": "Slides Fiscalização de Veículo de Carga (CPOR 2026), slides 11 e 160.",
+     "rev": "Tema 10 · Aula 12.",
+     "tema": 10
+    },
+    {
+     "id": "p5q95",
+     "tipo": "vf",
+     "dif": 2,
+     "orig": "autoral",
+     "conf": "material",
+     "p": "A CVC canavieira (Res. 872/21) deve trazer, na traseira do último veículo, a informação do limite de velocidade, e essa sinalização é facultada às demais CVC que exigem AET.",
+     "r": true,
+     "exp": "Verdadeiro. Res. 882, art. 25 e § 1º.",
+     "ref": "Slides Fiscalização de Veículo de Carga (CPOR 2026), slide 164.",
+     "rev": "Tema 10 · Aula 12.",
+     "tema": 10
+    },
+    {
+     "id": "p5q96",
+     "tipo": "mc",
+     "dif": 2,
+     "orig": "autoral",
+     "conf": "material",
+     "p": "Pelo art. 60, I, aplica-se o art. 187, I quando:",
+     "op": [
+      "Houver qualquer excesso de peso.",
+      "Veículo ou carga estiverem com peso ou dimensão acima do limite legal e existir restrição de local ou horário não constante na AET ou AE, imposta pelo órgão da via.",
+      "O veículo estiver sem inscrições técnicas.",
+      "O veículo exceder a CMT."
+     ],
+     "r": 1,
+     "exp": "É a hipótese de restrição de tráfego de local ou horário que a AET ou AE não autoriza.",
+     "oc": [
+      "Falsa. Excesso de peso é o art. 231, V.",
+      "Correta.",
+      "Falsa. Sem inscrições: art. 230, XXI ou 237.",
+      "Falsa. CMT: art. 231, X."
+     ],
+     "ref": "Slides Fiscalização de Veículo de Carga (CPOR 2026), slide 10.",
+     "rev": "Tema 10 · Aula 12.",
+     "tema": 10
+    }
+   ],
+   "prova": {
+    "temas": [
+     {
+      "n": 1,
+      "titulo": "Normas e capacidade do veículo: tara, lotação, PBT, PBTC, CMT, AET e AE",
+      "origem": "previsão"
+     },
+     {
+      "n": 2,
+      "titulo": "Dimensões: largura, altura, comprimentos e balanço traseiro",
+      "origem": "previsão"
+     },
+     {
+      "n": 3,
+      "titulo": "Eixos e PBTC das composições (carreta, LS, bitrem, rodotrem...)",
+      "origem": "previsão"
+     },
+     {
+      "n": 4,
+      "titulo": "CVC com AET: art. 18, requisitos do art. 19, horário e exceções",
+      "origem": "previsão"
+     },
+     {
+      "n": 5,
+      "titulo": "Limite técnico, inscrições do veículo e limite regulamentar",
+      "origem": "previsão"
+     },
+     {
+      "n": 6,
+      "titulo": "Balança x nota fiscal: tolerâncias e regra dos 50 t",
+      "origem": "previsão"
+     },
+     {
+      "n": 7,
+      "titulo": "Quem responde pelo excesso: embarcador, transportador ou os dois",
+      "origem": "previsão"
+     },
+     {
+      "n": 8,
+      "titulo": "AIT e cálculo da multa de excesso de peso",
+      "origem": "previsão"
+     },
+     {
+      "n": 9,
+      "titulo": "Excesso de CMT: enquadramento e multa",
+      "origem": "previsão"
+     },
+     {
+      "n": 10,
+      "titulo": "Medidas administrativas e qual artigo aplicar (art. 60 da Res. 882)",
+      "origem": "previsão"
+     }
+    ],
+    "abertas": [],
+    "aviso": "Não há imagens do instrutor nem prova anterior desta disciplina: os 10 temas são previsão, na ordem dos slides, no formato da prova de Trânsito II do mesmo instrutor (SGT PM Fortunato). Cada tema sorteia uma questão do banco, inclusive as 10 'estilo prova'."
    }
   },
   {
@@ -18989,14 +21614,59 @@ function go(hash) {
   route();
 }
 window.addEventListener("hashchange", () => { const h = location.hash.slice(1); if (h !== CUR) { CUR = h; route(); } });
+let CAPA_VISTA = false;
+try { CAPA_VISTA = sessionStorage.getItem("cpor-capa") === "1"; } catch (e) {}
 function route() {
   const h = CUR;
   window.scrollTo(0, 0);
+  document.body.classList.toggle("na-capa", h === "capa" || (h === "" && !CAPA_VISTA));
+  if (h === "capa" || (h === "" && !CAPA_VISTA)) return renderCapa();
   if (h === "revisao") return renderSession(null);
   if (h.startsWith("m-") && MAT[h.slice(2)]) return renderSubject(MAT[h.slice(2)]);
   renderHome();
 }
 
+
+/* ================= Capa de entrada ================= */
+function renderCapa() {
+  const app = $("#app");
+  const nq = new Set(DATA.materias.flatMap((m) => (m.questoes || []).map((q) => q.p.replace(/^ESTILO PROVA · /, "")))).size;
+  const nm = DATA.materias.length;
+  app.innerHTML = `
+    <section class="capa" aria-label="Capa da Central de Estudos">
+      <svg class="capa-road" viewBox="0 0 640 630" aria-hidden="true" preserveAspectRatio="xMaxYMax slice">
+        <defs><linearGradient id="cg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2b2f35" stop-opacity="0"/><stop offset=".35" stop-color="#2b2f35"/><stop offset="1" stop-color="#23262b"/></linearGradient></defs>
+        <polygon points="300,90 340,90 640,630 0,630" fill="url(#cg)"/>
+        <line x1="306" y1="100" x2="60" y2="630" stroke="#f2b705" stroke-width="5" opacity=".85"/>
+        <line x1="334" y1="100" x2="600" y2="630" stroke="#eceef0" stroke-width="5" opacity=".7"/>
+        <g fill="#f2b705"><polygon points="318,130 322,130 323,150 317,150"/><polygon points="316,190 324,190 326,225 314,225"/><polygon points="313,280 327,280 330,335 310,335"/><polygon points="308,415 332,415 337,500 303,500"/><polygon points="301,590 339,590 343,630 297,630"/></g>
+        <circle cx="320" cy="88" r="70" fill="#f2b705" opacity=".08"/>
+      </svg>
+      <div class="capa-txt">
+        <div class="capa-eb">Curso de Policiamento Ostensivo Rodoviário · CPOR</div>
+        <div class="capa-h">Central de<br><span>Estudos</span></div>
+        <div class="capa-dash" aria-hidden="true"></div>
+        <p class="capa-sub">Legislação de trânsito do zero à prova: aulas curtas, casos práticos e simulados.</p>
+        <div class="capa-chips"><span><b>${nq}</b> questões comentadas</span><span><b>${nm}</b> matérias</span><span>Simulados</span><span>Flashcards</span><span>Caderno de erros</span></div>
+        <div class="row"><button class="btn primary capa-btn" id="capa-entrar">Entrar na Central →</button></div>
+        <div class="capa-foot">Material de estudo da turma</div>
+      </div>
+    </section>
+    <section class="card">
+      <span class="tag">Como usar, em 4 passos</span>
+      <ol class="passos">
+        <li><b>Revisão de hoje.</b> Na tela inicial, faça os flashcards do dia (poucos minutos). Eles voltam em intervalos cada vez maiores até o fim do curso.</li>
+        <li><b>Escolha a matéria.</b> Comece pelas <b>Aulas</b> (quando houver) ou pelo <b>Resumo</b>. Em cada aula, pense na situação antes de ler e faça as atividades.</li>
+        <li><b>Treine as questões.</b> Em <b>Questões → Treinar</b>, cada resposta mostra o porquê da certa e de cada errada. Errou? O caderno de erros traz a questão de volta em 1, 7 e 30 dias.</li>
+        <li><b>Teste como na prova.</b> Use as <b>Provas Previstas</b> (10 questões, uma por tema) e os <b>Simulados</b>: sem resposta durante a prova, correção comentada no fim. Meta: nota 10 três vezes seguidas.</li>
+      </ol>
+      <p class="intro">No link público, o progresso fica salvo neste aparelho. Esta capa aparece ao abrir; depois, use o botão "Capa e guia" na tela inicial.</p>
+      <div class="row"><button class="btn" id="capa-entrar2">Entrar na Central</button></div>
+    </section>`;
+  const entra = () => { CAPA_VISTA = true; try { sessionStorage.setItem("cpor-capa", "1"); } catch (e) {} go(""); };
+  $("#capa-entrar").addEventListener("click", entra);
+  $("#capa-entrar2").addEventListener("click", entra);
+}
 /* ================= Início ================= */
 function renderHome() {
   const app = $("#app");
@@ -19010,10 +21680,12 @@ function renderHome() {
       <p class="intro">${due} para revisar e ${Math.min(fresh, NEW_PER_SESSION)} novos, de todas as matérias. Faça isso todo dia: são poucos minutos e é o que fixa a matéria de vez.${daysLeft() > 0 ? ` Faltam <b>${daysLeft()} dias</b> para o fim do curso (15/12).` : ""}</p>
       <div class="row"><button class="btn primary" id="start-review" ${todo ? "" : "disabled"}>${todo ? "Começar revisão" : "Tudo revisado hoje"}</button></div>
     </section>
+    <div class="row" style="justify-content:flex-end"><button class="btn small" id="ver-capa">Capa e guia</button></div>
     <div class="spread"><h2>Matérias</h2><span class="muted">${DATA.materias.length} ${DATA.materias.length === 1 ? "matéria" : "matérias"}</span></div>
     <div class="subjects" id="subjects"></div>
     <p class="intro">Novas matérias aparecem aqui quando você mandar o material para o Claude: apostila, PDF, foto do quadro ou anotação.</p>`;
   $("#start-review").addEventListener("click", () => go("revisao"));
+  $("#ver-capa").addEventListener("click", () => go("capa"));
   const host = $("#subjects");
   DATA.materias.forEach((m) => {
     const s = stats(m), p = P(m.id);
