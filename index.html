@@ -11303,6 +11303,23 @@ body.na-capa header { display: none; }
    "fonte": "Rascunho de respostas, Prova.pdf e áudios do instrutor (26/11/2026); slides Excesso de Peso e CMT e Fiscalização de Veículo de Carga.",
    "resumo": [
     {
+     "titulo": "Treine no Google Forms (para mandar aos colegas)",
+     "itens": [
+      "Os mesmos testes da prova final, em formulário: nota e correção comentada logo depois de enviar.",
+      "Não precisa de login. Mande o link no grupo da turma."
+     ],
+     "links": [
+      {
+       "t": "Prova (10 questões)",
+       "url": "https://docs.google.com/forms/d/e/1FAIpQLSeiijh7kkySbsB0X2wkancWF325o5xToYo7LU7iiyaQXRs-Ug/viewform"
+      },
+      {
+       "t": "Banco com cascas de banana (35)",
+       "url": "https://docs.google.com/forms/d/e/1FAIpQLSff1xGLWjpd5yo9UshKQWEV-Bm1RanA8EBd61lGpbAFb893dg/viewform"
+      }
+     ]
+    },
+    {
      "titulo": "Como é esta prova",
      "itens": [
       "10 questões de múltipla escolha, 5 alternativas, 1 ponto cada.",
@@ -27417,7 +27434,7 @@ function renderTab(m) {
 function renderResumo(m, body) {
   const card = document.createElement("div");
   card.className = "card resumo";
-  card.innerHTML = m.resumo.map((s) => `<h3>${esc(s.titulo)}</h3>` + (s.texto ? `<p>${esc(s.texto)}</p>` : "") + (s.itens ? `<ul>${s.itens.map((i) => `<li>${esc(i)}</li>`).join("")}</ul>` : "")).join("");
+  card.innerHTML = m.resumo.map((s) => `<h3>${esc(s.titulo)}</h3>` + (s.texto ? `<p>${esc(s.texto)}</p>` : "") + (s.itens ? `<ul>${s.itens.map((i) => `<li>${esc(i)}</li>`).join("")}</ul>` : "") + (s.links ? `<div class="row">${s.links.filter((l) => /^https:\/\//.test(l.url)).map((l) => `<a class="btn primary" href="${esc(l.url)}" target="_blank" rel="noopener noreferrer">${esc(l.t)}</a>`).join("")}</div>` : "")).join("");
   body.appendChild(card);
 }
 
